@@ -17,5 +17,3 @@ jobs:
         with:
           from_branch: "master"
           to_branch: "stores/store-name/master-region"
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
