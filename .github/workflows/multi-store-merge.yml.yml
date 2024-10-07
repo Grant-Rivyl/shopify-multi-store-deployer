@@ -17,7 +17,5 @@ jobs:
         with:
           from_branch: "master"
           to_branch: "stores/store-name/master-region"
-          push_token: "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 "
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          YOUR_PUSH_TOKEN: ${{ secrets.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 }}
