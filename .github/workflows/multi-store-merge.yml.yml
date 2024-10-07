@@ -16,4 +16,4 @@ jobs:
         uses: jamiemccleave/shopify-multi-store-deployer@v2.0
         with:
           from_branch: "master"
-          to_branch: "develop"
+          to_branch: "live"
