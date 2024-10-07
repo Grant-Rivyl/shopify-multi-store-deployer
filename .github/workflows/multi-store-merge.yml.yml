@@ -1,12 +1,11 @@
 name: "Multi Store Merge"
 
 on:
-  push:
+  push: # Triggers the action on a push event
 
 jobs:
   merge:
     runs-on: ubuntu-latest
-
 
     steps:
       - name: Checkout
@@ -15,5 +14,7 @@ jobs:
       - name: Shopify Multi Store Deployer
         uses: jamiemccleave/shopify-multi-store-deployer@v2.0
         with:
-          from_branch: "master"
-          to_branch: "live" 
+          from_branch: "main" # Replace 'master' with your source branch name
+          to_branch: "live" # Replace with your destination branch
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is automatically provided by GitHub Actions
