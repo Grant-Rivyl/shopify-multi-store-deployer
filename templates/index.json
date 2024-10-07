@@ -35,7 +35,7 @@
           "type": "slide",
           "settings": {
             "image": "shopify://shop_images/HeroSection.webp",
-            "heading": "Check out the new line of products gsdsd asdasd fdfdfdf dasdasd sd",
+            "heading": "Check",
             "heading_size": "h2",
             "subheading": "Experience the next level of LEGO® lighting with LMB 2.0. Say goodbye to clunky setups and embrace a seamless, brilliant building experience. Designed by LEGO® fans, for LEGO® fans, LMB 2.0 transforms your creations into stunning displays. Light up your builds like never before with LMB 2.0!",
             "button_label": "Shop Now",
@@ -170,7 +170,6 @@
       ],
       "settings": {
         "image": "shopify://shop_images/HeroSection.webp",
-        "image_2": "shopify://shop_images/CoolCar.jpg",
         "image_3": "shopify://shop_images/DIY-Designer-Kit-Technic-Transporter-Back-Light-My-Bricks.jpg",
         "height": "medium",
         "desktop_image_width": "medium",
