@@ -1,0 +1,61 @@
+section.thank-you{
+    position:relative;
+    height: 90vh;
+    &:before{
+        background: rgb(26, 14, 49);
+        background: radial-gradient(circle, rgba(26, 14, 49, 0) 15%, rgba(26, 14, 49, 0.8) 50%, rgba(26, 14, 49, 1) 100%);
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        z-index: 1;
+    }
+    &:after{
+        content: "";
+    background-image: url(https://cdn.shopify.com/s/files/1/0598/1231/5223/files/thank-you-bg.png?v=1725561106);
+    height: 100%;
+    position: absolute;
+    /* width: 300px; */
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    object-position: right;
+    background-repeat: no-repeat;
+    background-position: right;
+    }
+    .page-width{
+        position: relative;
+        z-index: 1;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        @media screen and (max-width: 749px) {
+            justify-content: flex-end;
+          }
+        .content--wrapper{
+            display:flex;
+            flex-direction: column;
+            row-gap:32px;
+            max-width:420px;
+            width:100%;
+            
+            @media screen and (max-width: 749px) {
+                padding-bottom: 100px;
+              }
+        }
+    }
+    .image--container{
+        position: absolute;
+        top:0px;
+        left:0px;
+        bottom:0px;
+        right:0px;
+        img{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+}

@@ -1,0 +1,85 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "name": "t:sections.header.name",
+  "type": "header",
+  "sections": {
+    "announcement-bar": {
+      "type": "announcement-bar",
+      "blocks": {
+        "announcement-bar-0": {
+          "type": "announcement",
+          "settings": {
+            "text": "Welcome to our store",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "announcement-bar-0"
+      ],
+      "settings": {
+        "color_scheme": "scheme-deb4358c-7106-42f5-b1fe-83cd128452e7",
+        "show_line_separator": true,
+        "show_social": false,
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "enable_country_selector": false,
+        "enable_language_selector": false
+      }
+    },
+    "header": {
+      "type": "header",
+      "blocks": {
+        "wishlist_hero_header_icon_wYJdhT": {
+          "type": "shopify://apps/wishlist-hero/blocks/header-icon/a9a5079b-59e8-47cb-b659-ecf1c60b9b72",
+          "settings": {
+            "customThemeName": "~",
+            "useCustomHeaderColor": true,
+            "customHeaderColor": "#fdcf00",
+            "useCustomHeaderSize": true,
+            "customHeaderIconSize": 26,
+            "additionalIconCssClassNames": "",
+            "additionalIconStyle": "",
+            "additionalContainerClasses": "",
+            "additionalContainerStyle": "",
+            "replaceExistingClasses": false
+          }
+        }
+      },
+      "block_order": [
+        "wishlist_hero_header_icon_wYJdhT"
+      ],
+      "settings": {
+        "logo_position": "middle-left",
+        "chat_link": "https://support.lightmybricks.com/",
+        "reward_link": "#smile-home",
+        "contact_us": "shopify://pages/contact",
+        "menu": "main-menu-1",
+        "menu_type_desktop": "mega",
+        "sticky_header_type": "on-scroll-up",
+        "show_line_separator": true,
+        "color_scheme": "scheme-cf184c6d-d667-4b4d-b47a-c3f98922056e",
+        "menu_color_scheme": "scheme-1",
+        "enable_country_selector": false,
+        "enable_language_selector": true,
+        "enable_customer_avatar": true,
+        "mobile_logo_position": "center",
+        "margin_bottom": 0,
+        "padding_top": 16,
+        "padding_bottom": 16
+      }
+    }
+  },
+  "order": [
+    "announcement-bar",
+    "header"
+  ]
+}

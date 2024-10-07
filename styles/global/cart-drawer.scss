@@ -1,0 +1,31 @@
+.cart-item{
+    .cart-item__media{
+        .cart-item__link{
+
+        }
+        .cart-item__image{
+            border-radius: 12px;
+        }
+    }
+    .cart-item__details{
+        .cart-item__name{
+            @include fontSaira;
+            @include colorDeeppurple;
+        }
+        .product-option{
+            @include fontSaira;
+        }
+    }
+    .cart-item__totals{
+        @include fontSaira;
+    }
+}
+.totals{
+    .totals__total-value{
+        @include fontSaira;
+    }
+}
+
+.price.price--end{
+    @include colorDeeppurple;
+}

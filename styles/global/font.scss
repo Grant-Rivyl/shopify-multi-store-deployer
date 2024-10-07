@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+body{
+  @include fontIntern;
+  line-height:1.45;
+  @include colorBlack;
+}
+body{
+  @include regularFont;
+}
+
+.h0, h1, .h1, h2, .h2, h3, .h3 {
+  @include fontRubick;
+  line-height:1;
+
+}
+
+h4, .h4, h5, .h5, h6, .h6{
+  @include fontSaira; 
+}
+
+h5, .h5, h6, .h6 {
+  line-height: 120%;
+}
+ 
+.h0, h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
+  text-transform: uppercase;
+}
+
+h1, .h1, .h0 {
+  font-size: 56px;
+  line-height:1;
+  @media screen and (max-width: 749px) {
+    font-size: 36px; 
+  }
+  @media screen and (max-width: 480px) {
+    font-size: 34px; 
+  }
+}
+
+h2, .h2 {
+  font-size: 48px;
+  line-height:100%;
+  @media screen and (max-width: 749px) {
+    font-size: 36px;
+  }
+  @media screen and (max-width: 480px) {
+    font-size: 32px;
+  }
+}
+
+h3, .h3 {
+  font-size: 40px;
+  line-height: 1;
+  @media screen and (max-width: 749px) {
+    font-size: 32px;
+  }
+}
+
+h4, .h4 {
+  font-size: 32px;
+  line-height:1.3;
+  @media screen and (max-width: 749px) {
+    font-size: 26px;
+  }
+}
+
+h5, .h5 {
+  font-size: 24px;
+  line-height:1.4;
+  @media screen and (max-width: 749px) {
+    font-size: 20px;
+  }
+}
+
+h6, .h6 {
+  font-size: 20px;
+  line-height:1.4;
+  @media screen and (max-width: 749px) {
+    font-size: 18px;
+  }
+}
+
+.font-text--large{
+  font-size:20px;
+}
+.font-text--medium{
+  font-size:18px;
+  line-height:150%;
+}
+.font-text--regular{
+  font-size:16px;
+}
+.font-text--small{
+  font-size:14px;
+}
+.font-text--tiny{
+  font-size:12px;
+}
+
+.font-weight--extra-bold{
+  font-weight:800;
+}
+.font-weight--bold{
+  font-weight:700;
+}
+.font-weight--semi-bold{
+  font-weight:600;
+}
+.font-weight--medium{
+  font-weight:500;
+}
+.font-weight--normal{
+  font-weight:400;
+}
+.font-weight--light{
+  font-weight:300;
+}
+
+.line-height--normal {
+  line-height: 100%;
+}
+.line-height--120 {
+  line-height: 120%;
+}
+.line-height--150 {
+  line-height: 150%;
+}
+
+.uppercase{
+  text-transform: uppercase;
+}
+.title-case {
+  text-transform: capitalize!important;
+}
+
+.subheading{
+  @include fontSize(medium);
+}
+
+.sentences{
+  font-size: 16px;
+}
+ 
+.text-transform--none{
+  text-transform: none; 
+}
+
+.text-decoration-underline {
+  text-decoration: underline; 
+}
+
+.text-decoration--none {
+  text-decoration: none;
+}
+
+.breadcrumbs__list{
+  .breadcrumbs__item{
+      .breadcrumbs__link {
+          @include small-text; 
+          @include colorBlack;
+          text-decoration:none; 
+      }
+  }
+} 
+@media screen and (max-width: 480px) {
+  .collection{
+    .card__content{
+      .card__information{
+        .card__information--wrapper{
+          .wrapper{
+            .lego-kit {
+              p{
+                font-size:8px;
+              }
+            }
+            .review-wrapper{
+              .rating-star{
+                --font-size: 1;
+              }
+              .rating-count{
+                font-size:8px;
+              }
+            }
+          }
+          .card__heading--wrapper{
+            h3{
+              font-size:12px;
+            }
+          }
+          .card-information{
+            .price{
+              font-size:12px;
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  }

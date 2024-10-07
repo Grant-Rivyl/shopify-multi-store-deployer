@@ -1,0 +1,24 @@
+section.gradient-purple{
+    .full-height{
+        height: 100%;
+        position:relative;
+        z-index: 3;
+        .grid{
+            height: 100%;
+            align-content: center;
+        }
+    }
+    .content--wrapper{
+        display:flex;
+        flex-direction: column;
+        row-gap:32px;
+        max-width:420px;
+        width:100%;
+        padding-bottom:120px;
+        @media screen and (min-width: 750px) {
+            padding-bottom:200px;
+          }
+        .section__title {
+        }
+    }
+}

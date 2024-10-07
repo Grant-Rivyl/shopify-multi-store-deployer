@@ -1,0 +1,66 @@
+@charset 'UTF-8';
+
+
+
+// 1. Configuration and helpers
+@import '_utils/font-size';
+@import '_utils/color','_utils/utilities','_utils/mixin';
+@import 'base/header','base/footer';
+// 2. Layouts
+
+
+// 3. Global 
+@import 'global/font',  
+        'global/cart-drawer',
+        'global/buttons';  
+// 4. Sections
+@import 'sections/product-image-with-text',
+        'sections/product-columns',
+        'sections/product-small-columns',
+        'sections/product-video-content',
+        'sections/product-image-with-columns', 
+        'sections/section-hero-banner-slider',
+        'sections/section-product-slider',
+        'sections/section-logo-carousel', 
+        'sections/section-testimonial',
+        'sections/footer',
+        'sections/blog-post',
+        'sections/home-cpa',
+        'sections/image-with-text-v2',
+        'sections/text-with-column', 
+        'sections/image-with-text-video',
+        'sections/section-image-with-text',
+        'sections/cta-v2',
+        'sections/contact-form-v2',
+        'sections/banner-with-bottom-content',
+        'sections/cta-video',
+        'sections/cta-column',
+        'sections/cta-row',
+        'sections/faqs',
+        'sections/main-article',
+        'sections/product-faqs',
+        'sections/video-culture',
+        'sections/section-our-team',
+        'sections/blog',
+        'sections/main-collection-list',
+        'sections/login',
+        'sections/register',
+        'sections/404',
+        'sections/thank-you',
+        'sections/utilities-text-section',
+        'sections/smile-custom-css',
+        'sections/search', 
+        'sections/featured-blog-slick',
+        'sections/review-custom-css';
+
+// @import 'sections/slant-bg'; 
+// 5. Components    
+// 6. Section styles
+
+// 7. Page-specific styles  
+@import 'pages/product',
+        'pages/main-about',
+        'pages/main-faqs',
+        'pages/collection',
+        'pages/main-support',
+        'pages/main-account';         

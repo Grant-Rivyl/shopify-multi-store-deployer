@@ -1,0 +1,424 @@
+{% assign metadata = product.metafields.custom.product_small_columns.value %}
+{% assign meta_count = metadata.count%}
+{% assign metafields = product.metafields.custom %}
+
+{% if  meta_count == 8 or  meta_count == 4 %}
+  {% assign column_count = 4 %}  
+{% else %}
+  {% assign column_count = 5 %}  
+{% endif %}
+{% if metafields.product_list_light != blank or metafields.product_list_docks != blank or  metafields.product_list_belts != blank or  metafields.product_list_tethers != blank or metafields.product_list_accesories != blank or metafields.product_list_flux_power != blank or metafields.product_list_assorted_bricks != blank or metafields.product_list_effects != blank or metafields.product_list_rgb != blank or metafields.product_list_usb != blank %}
+<section class="product-small-columns">
+    <div class="page-width">
+      <div class="title-wrapper">
+                    <h2 class="title no-margin">{{ section.settings.title }}</h2>
+                </div>
+        <div class="grid grid--2-col grid--3-col-tablet grid--{{column_count}}-col-desktop">
+          {% if metafields.product_list_light != blank %}
+            <div class="grid__item">
+              <div class="product-small-column"> 
+                <div class="product-column__icon">
+                  <img src="{{ section.settings.icon_lights | img_url: 'master'}}" alt="">
+                </div>
+                
+                <div class="product-small-column__content-wrapper">
+                  <p class="item__serial-number font-weight--medium">{{ metafields.product_list_light }}x</p>
+                  <div class="link--wrapper">
+                    <a href="{{ section.settings.part_url_lights }}" class="item__link">{{ section.settings.part_name_lights }}</a>
+                    <div class="arrow-right"></div>
+                  </div>
+                  
+                </div>
+                <a href="{{ section.settings.part_url_lights }}" class="cover_link"></a>
+              </div> 
+            </div>
+          {% endif %}
+          {% if metafields.product_list_docks != blank %}
+            <div class="grid__item">
+              <div class="product-small-column">
+                <div class="product-column__icon">
+                  <img src="{{ section.settings.icon_docks | img_url: 'master'}}" alt="">
+                </div>
+                
+                <div class="product-small-column__content-wrapper">
+                  <p class="item__serial-number font-weight--medium">{{ metafields.product_list_docks }}x</p>
+                  <div class="link--wrapper">
+                    <a href="{{ section.settings.part_url_docks }}" class="item__link">{{ section.settings.part_name_docks }}</a>
+                    <div class="arrow-right"></div>
+                  </div>
+                  
+                </div>
+                <a href="{{ section.settings.part_url_docks }}" class="cover_link"></a>
+              </div> 
+            </div>
+          {% endif %}
+          {% if metafields.product_list_belts != blank %}
+            <div class="grid__item">
+              <div class="product-small-column">
+                <div class="product-column__icon">
+                  <img src="{{ section.settings.icon_belts | img_url: 'master'}}" alt="">
+                </div>
+                
+                <div class="product-small-column__content-wrapper">
+                  <p class="item__serial-number font-weight--medium">{{ metafields.product_list_belts }}x</p>
+                  <div class="link--wrapper">
+                    <a href="{{ section.settings.part_url_belts }}" class="item__link">{{ section.settings.part_name_belts }}</a>
+                    <div class="arrow-right"></div>
+                  </div>
+                  
+                </div>
+                <a href="{{ section.settings.part_url_belts }}" class="cover_link"></a>
+              </div> 
+            </div>
+          {% endif %}
+          {% if metafields.product_list_tethers != blank %}
+            <div class="grid__item">
+              <div class="product-small-column">
+                <div class="product-column__icon">
+                  <img src="{{ section.settings.icon_tethers | img_url: 'master'}}" alt="">
+                </div>
+                
+                <div class="product-small-column__content-wrapper">
+                  <p class="item__serial-number font-weight--medium">{{ metafields.product_list_tethers }}x</p>
+                  <div class="link--wrapper">
+                    <a href="{{ section.settings.part_url_tethers }}" class="item__link">{{ section.settings.part_name_tethers }}</a>
+                    <div class="arrow-right"></div>
+                  </div>
+                   
+                </div>
+                <a href="{{ section.settings.part_url_tethers }}" class="cover_link"></a>
+              </div> 
+            </div>
+          {% endif %}
+         
+          
+          {% if metafields.product_list_accesories != blank %}
+            <div class="grid__item">
+              <div class="product-small-column">
+                <div class="product-column__icon">
+                  <img src="{{ section.settings.icon_accesories | img_url: 'master'}}" alt="">
+                </div>
+                
+                <div class="product-small-column__content-wrapper">
+                  <p class="item__serial-number font-weight--medium">{{ metafields.product_list_accesories }}x</p>
+                  <div class="link--wrapper">
+                    <a href="{{ section.settings.part_url_accesories }}" class="item__link">{{ section.settings.part_name_accesories }}</a>
+                    <div class="arrow-right"></div>
+                  </div>
+                  
+                </div>
+                <a href="{{ section.settings.part_url_accesories }}" class="cover_link"></a>
+              </div> 
+            </div>
+          {% endif %}  
+          {% if metafields.product_list_flux_power != blank %}
+            <div class="grid__item">
+              <div class="product-small-column">
+                <div class="product-column__icon">
+                  <img src="{{ section.settings.icon_flux_power | img_url: 'master'}}" alt="">
+                </div>
+                
+                <div class="product-small-column__content-wrapper">
+                  <p class="item__serial-number font-weight--medium">{{ metafields.product_list_flux_power }}x</p>
+                  <div class="link--wrapper">
+                    <a href="{{ section.settings.part_url_flux_power }}" class="item__link">{{ section.settings.part_name_flux_power }}</a>
+                    <div class="arrow-right"></div>
+                  </div>
+                  
+                </div>
+                <a href="{{ section.settings.part_url_flux_power }}" class="cover_link"></a>
+              </div> 
+            </div>
+          {% endif %}
+          
+          {% if metafields.product_list_assorted_bricks != blank %}
+            <div class="grid__item">
+              <div class="product-small-column">
+                <div class="product-column__icon">
+                  <img src="{{ section.settings.icon_assorted_bricks | img_url: 'master'}}" alt="">
+                </div>
+                
+                <div class="product-small-column__content-wrapper">
+                  <p class="item__serial-number font-weight--medium">{{ metafields.product_list_assorted_bricks }}x</p>
+                  <div class="link--wrapper">
+                    <a href="{{ section.settings.part_url_assorted_bricks }}" class="item__link">{{ section.settings.part_name_assorted_bricks }}</a>
+                    <div class="arrow-right"></div>
+                  </div>
+                  
+                </div>
+                <a href="{{ section.settings.part_url_assorted_bricks }}" class="cover_link"></a>
+              </div> 
+            </div>
+          {% endif %}
+          
+          {% if metafields.product_list_effects != blank %}
+            <div class="grid__item">
+              <div class="product-small-column">
+                <div class="product-column__icon">
+                  <img src="{{ section.settings.icon_effects | img_url: 'master'}}" alt="">
+                </div>
+                
+                <div class="product-small-column__content-wrapper">
+                  <p class="item__serial-number font-weight--medium">{{ metafields.product_list_effects }}x</p>
+                  <div class="link--wrapper">
+                    <a href="{{ section.settings.part_url_effects }}" class="item__link">{{ section.settings.part_name_effects }}</a>
+                    <div class="arrow-right"></div>
+                  </div>
+                  
+                </div>
+                <a href="{{ section.settings.part_url_effects }}" class="cover_link"></a>
+              </div> 
+            </div>
+          {% endif %}
+          {% if metafields.product_list_rgb != blank %}
+            <div class="grid__item">
+              <div class="product-small-column">
+                <div class="product-column__icon">
+                  <img src="{{ section.settings.icon_rgb | img_url: 'master'}}" alt="">
+                </div>
+                
+                <div class="product-small-column__content-wrapper">
+                  <p class="item__serial-number font-weight--medium">{{ metafields.product_list_rgb }}x</p>
+                  <div class="link--wrapper">
+                    <a href="{{ section.settings.part_url_rgb}}" class="item__link">{{ section.settings.part_name_rgb }}</a>
+                    <div class="arrow-right"></div>
+                  </div>
+                  
+                </div>
+                <a href="{{ section.settings.part_url_rgb }}" class="cover_link"></a>
+              </div> 
+            </div>
+          {% endif %}
+          {% if metafields.product_list_usb != blank %}
+            <div class="grid__item">
+              <div class="product-small-column">
+                <div class="product-column__icon">
+                  <img src="{{ section.settings.icon_usb | img_url: 'master'}}" alt="">
+                </div>
+                
+                <div class="product-small-column__content-wrapper">
+                  <p class="item__serial-number font-weight--medium">{{ metafields.product_list_usb }}x</p>
+                  <div class="link--wrapper">
+                    <a href="{{ section.settings.part_url_usb}}" class="item__link">{{ section.settings.part_name_usb }}</a>
+                    <div class="arrow-right"></div>
+                  </div>
+                  
+                </div>
+                <a href="{{ section.settings.part_url_usb }}" class="cover_link"></a>
+              </div> 
+            </div>
+          {% endif %}
+          
+            {% comment %} {% for product_small_column in metadata %} 
+              {% if  product_small_column.icon != null %}
+            <div class="grid__item">
+                
+                <div class="product-small-column">
+                    <div class="product-column__icon">
+                        <img src="{{ product_small_column.icon | metafield_text}}" alt="">
+                    </div>
+                    
+                    <div class="product-small-column__content-wrapper">
+                        <p class="item__serial-number font-weight--medium">{{ metafields.parts_list_quantity }}x</p>
+                        <div class="link--wrapper">
+                          <a href="{{ product_small_column.part_url }}" class="item__link">{{ product_small_column.part_name }}</a>
+                          <div class="arrow-right"></div>
+                        </div>
+                        
+                    </div>
+                    <a href="{{ product_small_column.part_url }}" class="cover_link"></a>
+                </div>
+              
+            </div>
+          {% endif %}
+            {% endfor %} {% endcomment %}
+        </div>
+    </div>
+</section>
+        {% endif %}
+{% schema %}
+    {
+      "name": "Product Small Columns",
+      "tag": "section",
+      "class": "section",
+      "disabled_on": {
+        "groups": ["header", "footer"]
+      },
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Parts list"
+        },
+        {
+            "type":"header",
+            "content": "Partlist Lights Content"
+          },{
+            "type": "url",
+            "id": "part_url_lights",
+            "label": "Part URL"
+          },{
+            "type": "text",
+            "id": "part_name_lights",
+            "label": "Part Name"
+          },{
+            "type": "image_picker",
+            "id": "icon_lights",
+            "label": "Icon"
+          },
+       
+       
+          {
+            "type":"header",
+            "content": "Partlist Docks Content"
+          },{
+            "type": "url",
+            "id": "part_url_docks",
+            "label": "Part URL"
+          },{
+            "type": "text",
+            "id": "part_name_docks",
+            "label": "Part Name"
+          },{
+            "type": "image_picker",
+            "id": "icon_docks",
+            "label": "Icon"
+          },
+          {
+            "type":"header",
+            "content": "Partlist Belts Content"
+          },{
+            "type": "url",
+            "id": "part_url_belts",
+            "label": "Part URL"
+          },{
+            "type": "text",
+            "id": "part_name_belts",
+            "label": "Part Name"
+          },{
+            "type": "image_picker",
+            "id": "icon_belts",
+            "label": "Icon"
+          },
+          {
+            "type":"header",
+            "content": "Partlist Tethers Content"
+          },{
+            "type": "url",
+            "id": "part_url_tethers",
+            "label": "Part URL"
+          },{
+            "type": "text",
+            "id": "part_name_tethers",
+            "label": "Part Name"
+          },{
+            "type": "image_picker",
+            "id": "icon_tethers",
+            "label": "Icon"
+          },
+          {
+            "type":"header",
+            "content": "Partlist Accesories Content"
+          },{
+            "type": "url",
+            "id": "part_url_accesories",
+            "label": "Part URL"
+          },{
+            "type": "text",
+            "id": "part_name_accesories",
+            "label": "Part Name"
+          },{
+            "type": "image_picker",
+            "id": "icon_accesories",
+            "label": "Icon"
+          },
+          {
+            "type":"header",
+            "content": "Partlist Flux Power Content"
+          },{
+            "type": "url",
+            "id": "part_url_flux_power",
+            "label": "Part URL"
+          },{
+            "type": "text",
+            "id": "part_name_flux_power",
+            "label": "Part Name"
+          },{
+            "type": "image_picker",
+            "id": "icon_flux_power",
+            "label": "Icon"
+          },
+          {
+            "type":"header",
+            "content": "Partlist Assorted Bricks Content"
+          },{
+            "type": "url",
+            "id": "part_url_assorted_bricks",
+            "label": "Part URL"
+          },{
+            "type": "text",
+            "id": "part_name_assorted_bricks",
+            "label": "Part Name"
+          },{
+            "type": "image_picker",
+            "id": "icon_assorted_bricks",
+            "label": "Icon"
+          },
+          {
+            "type":"header",
+            "content": "Partlist Effects Content"
+          },{
+            "type": "url",
+            "id": "part_url_effects",
+            "label": "Part URL"
+          },{
+            "type": "text",
+            "id": "part_name_effects",
+            "label": "Part Name"
+          },{
+            "type": "image_picker",
+            "id": "icon_effects",
+            "label": "Icon"
+          }
+          ,
+          {
+            "type":"header",
+            "content": "Partlist RGB Content"
+          },{
+            "type": "url",
+            "id": "part_url_rgb",
+            "label": "Part URL"
+          },{
+            "type": "text",
+            "id": "part_name_rgb",
+            "label": "Part Name"
+          },{
+            "type": "image_picker",
+            "id": "icon_rgb",
+            "label": "Icon"
+          },
+          {
+            "type":"header",
+            "content": "Partlist USB Connector Content"
+          },{
+            "type": "url",
+            "id": "part_url_usb",
+            "label": "Part URL"
+          },{
+            "type": "text",
+            "id": "part_name_usb",
+            "label": "Part Name"
+          },{
+            "type": "image_picker",
+            "id": "icon_usb",
+            "label": "Icon"
+          }
+      ],
+      "presets": [
+        {
+          "name": "Product Small Columns"
+        }
+      ]
+    }
+    {% endschema %}

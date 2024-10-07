@@ -1,0 +1,153 @@
+
+    {{ 'quick-add.css' | asset_url | stylesheet_tag }}
+    <script src="{{ 'quick-add.js' | asset_url }}" defer="defer"></script>
+    <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
+
+{%  style  %}  
+  .slider-desc {
+    font-size:18px;
+    line-height:150%;
+    margin:0 0 16px;
+    font-weight: 600;
+  }
+  @media screen and (max-width:749px) {
+    .slider-desc{
+      margin:0 0 12px;
+      text-align:left;
+    }
+  }
+{% endstyle %}
+{% assign collectionid =  article.metafields.custom.product_collection.value.handle %}
+      <div class="tabs-section page-width--narrow article-template__content">
+        
+        {%comment%}{%  if section.settings.useslider %}
+          <script src="//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+        
+        <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+        <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
+        {%  endif %}{%endcomment%}
+        <div class="section-title--wrapper">
+          <div class="title-description--wrapper">
+              <p class="slider-desc no-margin scroll-trigger animate--slide-in">Collection</p>
+            {%  if article.metafields.custom.product_collection != null %}
+              <h2 class="h1 no-margin scroll-trigger animate--slide-in text-color--purple">{{ article.metafields.custom.product_collection.value.title }}</h2>
+            {%  endif  %}
+
+          </div>
+          
+          <div class="center hide-on-mobile collection__view-all scroll-trigger animate--slide-in">
+              <a class="button button--primary" href="/{{ collectionid }}/all">  View All  </a>
+            </div>
+        </div>
+        
+        <div id="tabsMetaobject" class="tabs">
+            
+          {%  assign tabContent = '' %}
+          <ul>
+            {% comment %} {% assign targetid = article.metafields.custom.product_collection.value.handle %}
+            {% assign targetcollection = collections.all | where: 'id', targetid | first %} {% endcomment %}
+
+            {% comment %} {% for product in targetcollection.products %}
+            {{ product.title }}
+            {% endfor %} {% endcomment %}
+           {%  assign collection = collections[collectionid] %}
+            <!--<li><a href="#tabs-{{ collection.id }}">{{ collection.title  }}</a></li>-->
+            {%  capture content  %}
+                <div id="tabs-{{ collection.id }}">
+                  <ul  id="Slider-{{ section.id }}"
+                  data-section-id="{{ section.id }}" class="grid product-grid metaobject grid--2-col-tablet-down  grid--4-col-desktop"  role="list"
+                  aria-label="{{ 'general.slider.name' | t }}">
+                   {%- for product in collections[collectionid].products limit: 8 -%}
+                   <li class="grid__item scroll-trigger ">
+                    {% render 'card-product-custom',
+                      card_product: product, media_aspect_ratio: section.settings.image_ratio,
+                      image_shape: section.settings.image_shape,
+                      show_secondary_image: section.settings.show_secondary_image,
+                      show_vendor: section.settings.show_vendor,
+                      show_rating: section.settings.show_rating,
+                      show_quick_add: section.settings.enable_quick_add,
+                      section_id: section.id
+                    %}
+                   </li>
+                  {%- endfor -%}
+                  </ul>
+                 
+                </div>
+            {%  endcapture %}
+            {%  assign tabContent = tabContent | append: content %}
+          </ul>   
+          {{ tabContent }}
+  
+          
+        </div>  
+        {% comment %} <div class="center hide-on-desktop collection__view-all scroll-trigger animate--slide-in">
+          <a class="button button--primary" href="/collections/all"> All new releases </a>
+        </div> {% endcomment %}
+      </div> 
+  
+      <style>
+        .tabs .slick-track .grid__item  {
+          padding: 0 15px;
+        }
+        .tabs .slick-next {
+          right: 0;
+        }
+        .tabs .slick-prev {
+          left: 0;
+        }
+        .tabs .slick-next,.tabs .slick-prev {
+          transform: none;
+          top: -20px;
+        }
+        .tabs .slick-next::before,.tabs .slick-prev::before { color: #000;}
+        .tabs .slick-slider{ margin: 0 -5px;}
+        .tabs { background: none!important;border: none!important}
+        .tabs.ui-tabs .ui-tabs-nav {
+          background: none;
+          padding: 0;
+          display: flex;
+          justify-content: center;
+          border: none;
+        }
+        .tabs-section h2 {
+          text-align: left;
+        }
+        .tabs.ui-tabs .ui-tabs-nav li {
+          border: none;
+          background: none;
+        }
+        .tabs.ui-tabs .ui-tabs-nav li  a{
+          color: #ddd;
+          padding: 5px 40px;
+          border-radius: 50px;
+        }
+        .tabs.ui-tabs .ui-tabs-nav li.ui-tabs-active a {
+          background: grey;
+        }
+        @media screen and (max-width: 480px) {
+          .tabs-section .tabs {
+            margin-bottom: 0;
+          }
+        }
+  
+      </style>
+
+  <script>
+    
+  var variantDataMap{{ section.id | replace: '-', '_' }} = {
+    {% assign isFirstVariant = true %}
+    {% for product in section.settings.collection.products %}
+      {% for variant in product.variants %}
+          {% unless isFirstVariant %},{% endunless %}
+          "{{ variant.id }}": {
+            "imageUrl": "{{ variant.featured_media | img_url: 'master' }}",
+            "productUrl": "{{ product.url | append: '?variant=' | append: variant.id }}",
+            "varTitle": "{{ variant.title }}"
+          }
+          {% assign isFirstVariant = false %}
+      {% endfor %}
+    {% endfor %}
+  };
+  </script>
+  
+  {{ 'card-product-variant-selection-custom.js' | asset_url | script_tag }}

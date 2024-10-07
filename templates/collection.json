@@ -1,0 +1,223 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "image_banner_v2_qYjkcb": {
+      "type": "image-banner-v2",
+      "blocks": {
+        "heading_CpqCRm": {
+          "type": "heading",
+          "settings": {
+            "heading": "Medium length hero headline goes here",
+            "heading_size": "h0"
+          }
+        },
+        "text_ECi3BV": {
+          "type": "text",
+          "settings": {
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            "text_style": "subtitle"
+          }
+        },
+        "text_WJaRw3": {
+          "type": "text",
+          "settings": {
+            "text": "Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_CpqCRm",
+        "text_ECi3BV",
+        "text_WJaRw3"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/HeroBanner.webp",
+        "image_overlay_opacity": 0,
+        "image_height": "small",
+        "desktop_content_position": "middle-left",
+        "show_text_box": true,
+        "desktop_content_alignment": "left",
+        "color_scheme": "scheme-7465d7f7-f891-45f3-a00b-f8277b11cf76",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    "banner": {
+      "type": "main-collection-banner",
+      "disabled": true,
+      "settings": {
+        "show_collection_description": true,
+        "show_collection_image": false,
+        "color_scheme": "scheme-1"
+      }
+    },
+    "image_banner_v2_BAEnAY": {
+      "type": "image-banner-v2",
+      "blocks": {
+        "heading_LqY8eA": {
+          "type": "heading",
+          "settings": {
+            "heading": "Image banner",
+            "heading_size": "h1"
+          }
+        },
+        "text_NPqaNp": {
+          "type": "text",
+          "settings": {
+            "text": "Give customers details about the banner image(s) or content on the template.",
+            "text_style": "body"
+          }
+        },
+        "buttons_fiH8Xa": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Button label",
+            "button_link_1": "",
+            "button_style_secondary_1": false,
+            "button_label_2": "Button label",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_LqY8eA",
+        "text_NPqaNp",
+        "buttons_fiH8Xa"
+      ],
+      "disabled": true,
+      "settings": {
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "settings": {
+        "products_per_page": 12,
+        "columns_desktop": 3,
+        "color_scheme": "scheme-bb943aaf-46be-49bb-97bd-9a9aace4f467",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": true,
+        "quick_add": "standard",
+        "enable_filtering": true,
+        "filter_type": "vertical",
+        "enable_sorting": true,
+        "columns_mobile": "2",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_v2_qkJyRj": {
+      "type": "image-with-text-v2",
+      "settings": {
+        "image": "shopify://shop_images/RobotToy.webp",
+        "heading": "elevating your collection",
+        "heading_size": "h1",
+        "sub_text": "<p>Light My Bricks™ elevates LEGO® products, turning the ordinary into the extraordinary. We exist to showcase imaginative, innovative, and unique ways that your LEGO® journey can truly come to life, be shown off and enjoyed. </p>",
+        "mobile_view": "column",
+        "padding_top": 95,
+        "padding_bottom": 95
+      }
+    },
+    "testimonial_fdWzwL": {
+      "type": "testimonial",
+      "blocks": {
+        "testimonial_94aBFx": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "5-stars",
+            "testimonial": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.</p>",
+            "author": "Testimonial's name",
+            "author_info": "Los Angeles, CA"
+          }
+        },
+        "testimonial_dDVMDj": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "5-stars",
+            "testimonial": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.</p>",
+            "author": "Testimonial's name",
+            "author_info": "Los Angeles, CA"
+          }
+        },
+        "testimonial_DapUxN": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "5-stars",
+            "testimonial": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.</p>",
+            "author": "Testimonial's name",
+            "author_info": "Los Angeles, CA"
+          }
+        },
+        "testimonial_M9zYLd": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "5-stars",
+            "testimonial": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.</p>",
+            "author": "Testimonial's name",
+            "author_info": "Los Angeles, CA"
+          }
+        },
+        "testimonial_gmad8f": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "5-stars",
+            "testimonial": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.</p>",
+            "author": "Testimonial's name",
+            "author_info": "Los Angeles, CA"
+          }
+        }
+      },
+      "block_order": [
+        "testimonial_94aBFx",
+        "testimonial_dDVMDj",
+        "testimonial_DapUxN",
+        "testimonial_M9zYLd",
+        "testimonial_gmad8f"
+      ],
+      "settings": {
+        "title": "Testimonials",
+        "caption_text": "",
+        "testimonial_color": "",
+        "testimonial_count": 2,
+        "align_text": "left",
+        "background_color": "#595959",
+        "full_width": true,
+        "container_style": true,
+        "padding_top": 112,
+        "padding_bottom": 112
+      }
+    }
+  },
+  "order": [
+    "image_banner_v2_qYjkcb",
+    "banner",
+    "image_banner_v2_BAEnAY",
+    "product-grid",
+    "image_with_text_v2_qkJyRj",
+    "testimonial_fdWzwL"
+  ]
+}

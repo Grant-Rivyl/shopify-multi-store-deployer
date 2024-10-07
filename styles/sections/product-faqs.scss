@@ -1,0 +1,123 @@
+.collapsible-div {
+    background: $purple_light ;
+    .collapsible-content {
+        .collapsible-content__wrapper {
+            .collapsible--content {
+                .collapsible-content__header{
+                    margin-bottom: 50px;
+                    @media screen and (max-width:749px) {
+                        margin-bottom: 24px;
+                    }
+                    .collapsible-content__heading {
+                        margin-bottom: 12px;
+                    }
+                    .description {
+                        margin:0;
+
+                        &:left {
+                            text-align: left;
+                        }
+                        &:center {
+                            text-align: center;
+                        }
+                        &:right {
+                            text-align: right;
+                        }
+                    }
+                }
+                .grid { 
+                    .grid__item {
+                       
+                        .accordion {
+                            padding-bottom: 20px;
+                            border:0;
+                            &:last-child {
+                                margin-bottom: 0;
+                            }
+                            @media screen and (max-width:749px) {
+                                padding:10px 20px;
+                            }
+                            @media screen and (max-width:749px) {
+                                padding:10px 0;
+                            }
+                            details {
+                                summary {
+                                    border-radius: 10px;
+                                    border: 2px solid $light_purple;
+                                    padding: 20px 40px;
+                                    @media screen and (max-width:749px) {
+                                        padding:10px;
+                                    }
+                                    &:hover {
+                                        background:transparent;
+                                    }
+
+                                    .accordion__title {
+                                        max-width: 100%;
+                                        font-weight: 700 !important;
+                                        @include fontIntern;
+                                        @include colorDeeppurple;
+                                        @include fontSize(medium);
+                                       
+                                    }
+                                    svg { 
+
+                                    }
+                                }
+                                .accordion__content{
+                                    @include fontSize(medium);
+                                }
+                                .accordion__content {
+                                    background-color: $purple_light;
+                                    padding:0 45px;
+                                    font-weight: 400 !important;
+                                    padding-top:24px;
+                                    
+                                    @include colorDeeppurple;
+                                    @media screen and (max-width:749px) {
+                                        padding: 20px;
+                                    }
+                                }
+                              
+                            }
+                        }
+                    }
+                }
+                .more-question-wrapper {
+                    background: $white;
+                    padding:40px;
+                    border-radius: 20px;
+                    display:flex;
+                    justify-content: start; 
+                    align-items: start;
+                    margin-top:80px;
+                    @media screen and (max-width: 749px) {
+                        padding:20px;
+                        margin-top:48px;
+                    }
+                    .more-question-inner {
+                       width: 100%;
+                        background-color: $white;
+                        border-radius: 24px;
+                        @media screen and (max-width:990px) {
+                           width:100%;
+                        }
+                        .more-question-content-wrapper {
+                            .more-question-heading {
+                                margin:0 0 16px;
+                                @include colorBurntorange;
+                            }
+                            .more-question-description {
+                                margin:0 0 24px;
+                                
+                            }
+                            .more-question-description{
+                                @include fontSize(medium);
+                            }
+                        }
+                    } 
+                }
+            } 
+        }
+    }
+}

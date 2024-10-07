@@ -1,0 +1,103 @@
+{{ 'component-image-with-text.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+
+{% endstyle %}
+<section class="cta-v2 section-{{ section.id }}-padding">
+    <div class="cta-v2-image--wrapper">
+        <img src="https://cdn.shopify.com/s/files/1/0598/1231/5223/files/LightMyBricks_Logo_Icon-Yellow_1.png?v=1723547211" alt="">
+    </div>
+    <div class="page-width">
+        <div class="cta-v2-wrapper">
+            <div class="cta-v2-left-content">
+                <h3 class="title">{{ section.settings.title }} </h3>
+                <p class="description">
+                    {{ section.settings.description }}
+                </p>
+                <a href="{{ section.settings.url }}" class="button button--primary {% if section.settings.onhover_switch %} onhover_light {% endif %}"> 
+                {{ section.settings.btn-label }} 
+                <svg xmlns="http://www.w3.org/2000/svg" width="31" height="15" viewBox="0 0 31 15" fill="none">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M23.6664 0.533691L30.6312 7.50009L23.6664 14.4665L22.5336 13.3337L27.5688 8.30009H0V6.70009H27.5688L22.5336 1.66649L23.6664 0.533691Z" fill="#1A0E31"/>
+                </svg>
+                </a>
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+
+{% schema %}
+    {
+      "name": "CTA v2",
+      "settings": [      
+        {
+            "type": "text",
+            "id": "title",
+            "label": "Heading Title",
+            "default": "WE'RE HIRING!"
+        },
+        {
+            "type": "inline_richtext",
+            "id": "description",
+            "label": "Description",
+            "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. "
+        },
+        {
+            "type": "text",
+            "id": "btn-label",
+            "label": "Button Label",
+            "default": "Open Positions"
+        },
+        {
+            "type": "url",
+            "id": "url",
+            "label": "Button URL"
+        },
+        {
+          "type": "checkbox",
+          "id": "onhover_switch",
+          "label": "Onhover switch ( Dark to Light )",
+          "default": false
+        },
+        {
+            "type": "range",
+            "id": "padding_top",
+            "min": 0,
+            "max": 150,
+            "step": 5,
+            "unit": "px",
+            "label": "t:sections.all.padding.padding_top",
+            "default": 65
+        },
+        {
+            "type": "range",
+            "id": "padding_bottom",
+            "min": 0,
+            "max": 150,
+            "step": 5,
+            "unit": "px",
+            "label": "t:sections.all.padding.padding_bottom",
+            "default": 65
+        }
+      ],
+
+      "presets": [
+        {
+            "name": "CTA v2",
+            "blocks": []
+        }
+     ]
+    }
+{% endschema %}

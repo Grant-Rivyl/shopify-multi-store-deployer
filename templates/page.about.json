@@ -1,0 +1,277 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "banner_with_bottom_content_kyLWW8": {
+      "type": "banner-with-bottom-content",
+      "blocks": {
+        "banner_Tr7gAC": {
+          "type": "banner",
+          "settings": {
+            "img": "shopify://shop_images/AboutPageBanner.webp"
+          }
+        },
+        "heading_PqdtDY": {
+          "type": "heading",
+          "settings": {
+            "heading": "ABOUT  LIGHT MY BRICKS™"
+          }
+        },
+        "text_YRBLQx": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Light My Bricks™ is an Australian team of creatives that elevate LEGO® products, turning the ordinary into the extraordinary. We exist to showcase imaginative, innovative, and unique ways that your LEGO® journey can truly come to life, be shown off and enjoyed.We know what you need because we are one of you. We live in the LEGO® universe. We are the culmination of years of dedication, research, innovation, design, and engineering to provide seamless lighting for every LEGO® collection. Put simply, we care about taking LEGO® to the next level. Step-by-step we’re enhancing the experience for everyone looking for fun \\ways to enhance their display. We are the componentry your LEGO® deserves because there is only one way to Light My Bricks™.</p>"
+          }
+        },
+        "left_image_Q9BLgT": {
+          "type": "left-image",
+          "settings": {
+            "left-img": "shopify://shop_images/BricksImage.webp"
+          }
+        }
+      },
+      "block_order": [
+        "banner_Tr7gAC",
+        "heading_PqdtDY",
+        "text_YRBLQx",
+        "left_image_Q9BLgT"
+      ],
+      "settings": {
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    },
+    "cta_video_yjYaxK": {
+      "type": "cta-video",
+      "blocks": {
+        "column_imwdHC": {
+          "type": "column",
+          "settings": {
+            "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+            "cover_image": "shopify://shop_images/video-cover.webp",
+            "enable_video_looping": false
+          }
+        }
+      },
+      "block_order": [
+        "column_imwdHC"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/CTALogo.webp",
+        "heading": "WELCOME TO LIGHT MY BRICKS",
+        "heading_size": "h3",
+        "text": "<p>Step into the world of Light My Bricks with seamless ease. Each component is engineered to perfectly fit. No mess. No confusion. Just clear instructions that champion an enjoyable build from start to finish.</p>",
+        "padding_top": 60
+      }
+    },
+    "cta_column_UXqxxw": {
+      "type": "cta-column",
+      "blocks": {
+        "column_ki3LQY": {
+          "type": "column",
+          "settings": {
+            "block_image": "shopify://shop_images/AboutPageBanner.webp",
+            "block_date": "Month. year",
+            "block_heading": "MILESTONE HEADING GOES HERE",
+            "block_heading_size": "h3",
+            "block_text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>",
+            "block_button_label_1": "Button",
+            "block_link_1": "",
+            "show_button_1": true,
+            "block_button_label_2": "Button",
+            "block_link_2": "",
+            "show_button_2": true
+          }
+        },
+        "column_AY694c": {
+          "type": "column",
+          "settings": {
+            "block_image": "shopify://shop_images/AboutPageBanner.webp",
+            "block_date": "Month. year",
+            "block_heading": "MILESTONE HEADING GOES HERE",
+            "block_heading_size": "h3",
+            "block_text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>",
+            "block_button_label_1": "Button",
+            "block_link_1": "",
+            "show_button_1": true,
+            "block_button_label_2": "Button",
+            "block_link_2": "",
+            "show_button_2": true
+          }
+        },
+        "column_gJGj6n": {
+          "type": "column",
+          "settings": {
+            "block_image": "shopify://shop_images/RivdendellProductBack2.webp",
+            "block_date": "Month. year",
+            "block_heading": "MILESTONE HEADING GOES HERE",
+            "block_heading_size": "h3",
+            "block_text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>",
+            "block_button_label_1": "Button",
+            "block_link_1": "",
+            "show_button_1": true,
+            "block_button_label_2": "Button",
+            "block_link_2": "",
+            "show_button_2": true
+          }
+        }
+      },
+      "block_order": [
+        "column_ki3LQY",
+        "column_AY694c",
+        "column_gJGj6n"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/CTALogo.webp",
+        "heading": "we’re lifelong builders",
+        "heading_size": "h3",
+        "text": "<p>We’re passionate enthusiasts that have been into modular building for years. The only thing missing was a company that gave us high-quality products with simple instructions. We knew that we had to do it ourselves. Here’s our story.</p>",
+        "padding_top": 110,
+        "padding_bottom": 110
+      }
+    },
+    "cta_row_cMxPzW": {
+      "type": "cta-row",
+      "blocks": {
+        "row_g9wd7N": {
+          "type": "row",
+          "settings": {
+            "block_heading": "On the hunt for more",
+            "block_heading_size": "h3",
+            "block_text": "<p>We exist to showcase imaginative ways your LEGO® journey can come to life, be shown off and enjoyed. As collectors, builders and LEGO® enthusiasts ourselves, we’re constantly on the hunt for more.</p>"
+          }
+        },
+        "row_GMQQ9f": {
+          "type": "row",
+          "settings": {
+            "block_heading": "ultimate building experience",
+            "block_heading_size": "h3",
+            "block_text": "<p>Whether you’ve been a part of the LEGO® universe a few hours or a few decades, everyone drawn to LEGO® is invited to join in the fun. Light My Bricks™ makes your build the ultimate experience.</p>"
+          }
+        },
+        "row_4nWyYn": {
+          "type": "row",
+          "settings": {
+            "block_heading": "lego reimagined",
+            "block_heading_size": "h3",
+            "block_text": "<p>Light My Bricks™ is here to transform your LEGO® collection right from the start. For everyone to envision LEGO® brought to life in new, innovative ways. We’re always evolving to keep pace with builders just like us.</p>"
+          }
+        },
+        "row_nwKGUq": {
+          "type": "row",
+          "settings": {
+            "block_heading": "seamless simplicity",
+            "block_heading_size": "h3",
+            "block_text": "<p>Step into the world of Light My Bricks™ with seamless ease. Each component is engineered to perfectly fit. No mess. No confusion. Just clear instructions that champion an enjoyable build from start to finish.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "row_g9wd7N",
+        "row_GMQQ9f",
+        "row_4nWyYn",
+        "row_nwKGUq"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/CTALogo.webp",
+        "heading": "for the builders",
+        "heading_size": "h3",
+        "text": "<p>Layer-by-layer we’re building an experience that everyone can enjoy. Through intentional design, fun edutainment and personal passion, we’re giving everyone the opportunity to connect the bricks and discover new ways to display.</p>",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "video_culture_hmE6BQ": {
+      "type": "video-culture",
+      "settings": {
+        "video": "shopify://files/videos/FY22-Welcome To YouTube_e492685f-278e-4360-beb4-57739411daff.mp4",
+        "title": "Team Culture",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.",
+        "btn-label": "Team Culture",
+        "url": "#",
+        "padding_top": 65,
+        "padding_bottom": 65
+      }
+    },
+    "slick_carousel_djyFQr": {
+      "type": "slick-carousel",
+      "blocks": {
+        "tab_dBXfiz": {
+          "type": "tab",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "tab_dBXfiz"
+      ],
+      "settings": {
+        "title": "NEW RELEASES",
+        "desc": "The Ultimate Build",
+        "collection": "all",
+        "useslider": true,
+        "onhover_switch": false,
+        "enable_quick_add": false
+      }
+    },
+    "featured_blog_mihPYg": {
+      "type": "featured-blog",
+      "disabled": true,
+      "settings": {
+        "heading": "STAY IN THE KNOW",
+        "heading_size": "h1",
+        "description": "Check out our awesome blogs stay up to date with all things Light My Bricks™.",
+        "blog": "news",
+        "post_limit": 3,
+        "columns_desktop": 3,
+        "color_scheme": "",
+        "show_image": true,
+        "show_date": true,
+        "show_author": false,
+        "onhover_switch": false,
+        "show_view_all": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_blog_slick_eP43dz": {
+      "type": "featured-blog-slick",
+      "settings": {
+        "heading": "Blog posts",
+        "heading_size": "h2",
+        "description": "Check out our awesome blogs stay up to date with all things Light My Bricks™.",
+        "blog": "news",
+        "onhover_switch": false,
+        "show_view_all": true,
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    }
+  },
+  "order": [
+    "main",
+    "banner_with_bottom_content_kyLWW8",
+    "cta_video_yjYaxK",
+    "cta_column_UXqxxw",
+    "cta_row_cMxPzW",
+    "video_culture_hmE6BQ",
+    "slick_carousel_djyFQr",
+    "featured_blog_mihPYg",
+    "featured_blog_slick_eP43dz"
+  ]
+}

@@ -1,0 +1,86 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "main": {
+      "type": "main-support",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "image_banner_nPh6Te": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_VrxHQU": {
+          "type": "heading",
+          "settings": {
+            "heading": "SUPPORT PORTAL",
+            "heading_size": "hxxl"
+          }
+        },
+        "buttons_T4mByr": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Get Help",
+            "button_link_1": "shopify://pages/faqs",
+            "onhover_switch": false,
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_VrxHQU",
+        "buttons_T4mByr"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/ImageSupport.webp",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "desktop_content_position": "middle-left",
+        "show_text_box": true,
+        "desktop_content_alignment": "left",
+        "color_scheme": "scheme-7465d7f7-f891-45f3-a00b-f8277b11cf76",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    "slick_carousel_G9RK44": {
+      "type": "slick-carousel",
+      "blocks": {
+        "tab_TnNXKb": {
+          "type": "tab",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "tab_TnNXKb"
+      ],
+      "settings": {
+        "title": "NEW RELEASES",
+        "desc": "Latest LEGO® Light Kits",
+        "collection": "all",
+        "useslider": true,
+        "onhover_switch": false,
+        "enable_quick_add": true
+      }
+    }
+  },
+  "order": [
+    "main",
+    "image_banner_nPh6Te",
+    "slick_carousel_G9RK44"
+  ]
+}

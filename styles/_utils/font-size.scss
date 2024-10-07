@@ -1,0 +1,15 @@
+$font-sizes: (
+  xsmall: (desktop: 12px, mobile: 10px),
+  small: (desktop: 14px, mobile: 12px),
+  regular: (desktop: 16px, mobile: 14px),
+  medium: (desktop: 18px, mobile: 16px),
+  large: (desktop: 24px, mobile: 20px),
+  extralarge: (desktop: 32px, mobile: 28px)
+);
+@mixin fontSize($size) {
+  font-size: map-get($font-sizes, $size, desktop);
+
+  @media screen and (max-width: 749px) {
+    font-size: map-get($font-sizes, $size, mobile);
+  }
+}

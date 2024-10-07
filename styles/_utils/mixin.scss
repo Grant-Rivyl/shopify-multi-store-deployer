@@ -1,0 +1,121 @@
+/*FONT FAMILY*/
+@mixin fontRubick{
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+  }
+  @mixin fontSaira{ 
+    font-family: "Saira", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal; 
+  }
+  @mixin fontIntern{
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+  }
+  
+  // @mixin mediumFont($desktop-size: 18px, $mobile-size: 16px) {
+  //   font-size: $desktop-size;
+  
+  //   @media screen and (max-width: 749px) {
+  //     font-size: $mobile-size;
+  //   } 
+  // } 
+  
+  // @mixin regularFont($desktop-size: 16px, $mobile-size: 14px) {
+  //   font-size: $desktop-size;
+  
+  //   @media screen and (max-width: 749px) {
+  //     font-size: $mobile-size;
+  //   }
+  // }
+  /*FONT SIZE*/
+
+
+ 
+  @mixin xsmallFont{
+    font-size: 12px;
+  }
+   
+  @mixin smallFont{
+    font-size: 14px;
+  }
+  @mixin regularFont{
+    font-size: 16px;
+  }
+  @mixin mediumFont{
+    font-size: 18px;
+  }
+  @mixin font-size--20{
+    font-size: 20px;
+  }
+  @mixin largeFont{
+    font-size: 24px;
+  }
+ 
+  @mixin extralargefont{
+    font-size: 32px;
+  }
+  /*COLOR*/
+  
+  @mixin colorBlack{
+    color:$black;
+  }
+  @mixin colorGrey{
+    color:#505050;
+  }
+
+  @mixin colorWhite{
+    color:$white;
+  }
+  @mixin colorLightpurple{
+    color:$purple_light;
+  }
+  @mixin colorBurntorange{
+    color:$burnt_orange;
+  }
+  @mixin colorBurntorange{
+    color:$burnt_orange;
+  }
+  @mixin colorDeeppurple{
+    color:$deep_purple;
+  }
+  /*FONT WEIGHT*/
+  @mixin fontWeightBold{
+    font-weight: 700; 
+  }
+  @mixin fontWeightSemiBold{
+    font-weight: 600; 
+  }
+  
+  @mixin sub-headline-font{
+    @include fontSaira;
+    line-height: 1.5;
+    @include mediumFont;
+  }
+ 
+  @mixin titles-web{ 
+    @include fontIntern;
+    @include regularFont;
+    line-height: 1.5;
+  }
+
+  @mixin titles-web-bold{
+    @include fontIntern;
+    @include mediumFont;
+    @include fontWeightBold;
+    line-height: 1.5;
+  }
+  @mixin small-text{
+    @include fontIntern;
+    @include smallFont;
+    line-height: 1.5;
+  }
+  @mixin link{
+    @include fontIntern;
+    @include xsmallFont;
+    line-height: 1.5;
+  }

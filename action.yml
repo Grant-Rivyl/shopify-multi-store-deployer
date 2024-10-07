@@ -16,11 +16,11 @@ inputs:
   user_name:
     description: "User name for git commits"
     required: false
-    default: "GitHub Upmerge Action"
+    default: "Grant Payad"
   user_email:
     description: "User email for git commits"
     required: false
-    default: "actions@github.com"
+    default: "grant@rivyl.com"
   push_token:
     description: "Environment variable containing the token to use for push"
     required: false

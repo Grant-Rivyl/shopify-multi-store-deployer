@@ -1,0 +1,401 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "vendor": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "{{ product.vendor }}",
+            "text_style": "uppercase"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "circle"
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true
+          }
+        },
+        "share": {
+          "type": "share",
+          "disabled": true,
+          "settings": {
+            "share_label": "Share"
+          }
+        },
+        "description": {
+          "type": "description",
+          "disabled": true,
+          "settings": {
+          }
+        },
+        "collapsible_tab_UD3RMr": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Shipping",
+            "icon": "none",
+            "content": "<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_tdkh8R": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Instructions",
+            "icon": "none",
+            "content": "<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_wCNCqd": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Returns",
+            "icon": "none",
+            "content": "<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "vendor",
+        "title",
+        "price",
+        "variant_picker",
+        "quantity_selector",
+        "buy_buttons",
+        "share",
+        "description",
+        "collapsible_tab_UD3RMr",
+        "collapsible_tab_tdkh8R",
+        "collapsible_tab_wCNCqd"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "color_scheme": "scheme-1",
+        "media_size": "medium",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "gallery_layout": "thumbnail_slider",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "mobile_thumbnails": "show",
+        "hide_variants": true,
+        "enable_video_looping": false,
+        "padding_top": 80,
+        "padding_bottom": 100
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "disabled": true,
+      "settings": {
+        "heading": "You may also like",
+        "heading_size": "h2",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "color_scheme": "scheme-1",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "columns_mobile": "2",
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    },
+    "product_image_with_text_HjP3DC": {
+      "type": "product-image-with-text",
+      "blocks": {
+        "heading_edYiaF": {
+          "type": "heading",
+          "settings": {
+            "heading": "light up rivendell",
+            "heading_size": "h1"
+          }
+        },
+        "text_HEwpc6": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_GGYtMV": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_edYiaF",
+        "text_HEwpc6",
+        "button_GGYtMV"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/RivdendellProductBack2.webp",
+        "height": "medium",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "product_columns_pnH3jF": {
+      "type": "product-columns",
+      "settings": {
+      }
+    },
+    "product_small_columns_icons_DAM9Af": {
+      "type": "product-small-columns-icons",
+      "settings": {
+        "title": "Parts list",
+        "part_url_lights": "#",
+        "part_name_lights": "Lights",
+        "icon_lights": "shopify://shop_images/Lights.svg",
+        "part_url_docks": "#",
+        "part_name_docks": "Docks",
+        "icon_docks": "shopify://shop_images/Docks.svg",
+        "part_url_belts": "#",
+        "part_name_belts": "Belts ",
+        "icon_belts": "shopify://shop_images/Belts.svg",
+        "part_url_tethers": "#",
+        "part_name_tethers": "Tethers ",
+        "icon_tethers": "shopify://shop_images/Tethers.svg",
+        "part_url_accesories": "#",
+        "part_name_accesories": "Accessories",
+        "icon_accesories": "shopify://shop_images/Accessories.svg",
+        "part_url_flux_power": "#",
+        "part_name_flux_power": "Flux Power",
+        "icon_flux_power": "shopify://shop_images/Flux_Power.svg",
+        "part_url_assorted_bricks": "#",
+        "part_name_assorted_bricks": "Assorted Bricks",
+        "icon_assorted_bricks": "shopify://shop_images/Assorted_Bricks.svg",
+        "part_url_effects": "#",
+        "part_name_effects": "Effects ",
+        "icon_effects": "shopify://shop_images/Effects.svg",
+        "part_url_rgb": "",
+        "part_name_rgb": "RGB ",
+        "icon_rgb": "shopify://shop_images/RGB.svg",
+        "part_url_usb": "",
+        "part_name_usb": "USB Connector",
+        "icon_usb": "shopify://shop_images/USBConnector.svg"
+      }
+    },
+    "product_video_content_jqX3za": {
+      "type": "product-video-content",
+      "settings": {
+        "title": "instructions",
+        "caption": "How will you build?",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.",
+        "box_one_desc": "Apply our lights while  you build your LEGO set",
+        "box_1_url": "",
+        "box_sec_desc": "Apply our lights while  you build your LEGO set",
+        "box_2_url": ""
+      }
+    },
+    "product_image_with_columns_gbnAhV": {
+      "type": "product-image-with-columns",
+      "blocks": {
+        "columns_AwMxth": {
+          "type": "columns",
+          "settings": {
+            "text": "Welcome to our store",
+            "title": "Build your way",
+            "desc": "Our collections give you the freedom to personalise your sets."
+          }
+        },
+        "columns_Gwiq4A": {
+          "type": "columns",
+          "settings": {
+            "text": "Welcome to our store",
+            "svg": "shopify://shop_images/AwardWinning.svg",
+            "title": "Award-winning designs",
+            "desc": "Our work with LEGO® has been nationally recognised."
+          }
+        },
+        "columns_fizYGx": {
+          "type": "columns",
+          "settings": {
+            "text": "Welcome to our store",
+            "svg": "shopify://shop_images/Bricks.svg",
+            "title": "LEGO®-Like instructions",
+            "desc": "Our sets contain simple instructions that you’re used to."
+          }
+        },
+        "columns_xRhKVb": {
+          "type": "columns",
+          "settings": {
+            "text": "Welcome to our store",
+            "svg": "shopify://shop_images/puzzle.svg",
+            "title": "What makes us different?",
+            "desc": "Our quality, ease-of-use, and customisation is unrivalled."
+          }
+        }
+      },
+      "block_order": [
+        "columns_AwMxth",
+        "columns_Gwiq4A",
+        "columns_fizYGx",
+        "columns_xRhKVb"
+      ],
+      "settings": {
+      }
+    },
+    "1723776056f00b4cbb": {
+      "type": "apps",
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "home_cpa_fhPMEF": {
+      "type": "home-cpa",
+      "blocks": {
+        "heading_U6hKRA": {
+          "type": "heading",
+          "settings": {
+            "block_heading": "JOIN LIGHT MY BRICKS CLUB",
+            "block_heading_size": "h2"
+          }
+        },
+        "paragraph_eq86FW": {
+          "type": "paragraph",
+          "settings": {
+            "block_text": "<p>Join our Light My Bricks club to get updates on new releases, promotions and more. </p>"
+          }
+        },
+        "email_form_TKpygc": {
+          "type": "email_form",
+          "settings": {
+            "email_text": "<p>By clicking Sign Up you're confirming that you agree with our <a href=\"#\" title=\"#\">Terms and Conditions</a>.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_U6hKRA",
+        "paragraph_eq86FW",
+        "email_form_TKpygc"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/lmb-logo-large.webp",
+        "padding_top": 110,
+        "padding_bottom": 110,
+        "onhover_switch": false
+      }
+    },
+    "product_collapsible_content_xD8GjF": {
+      "type": "product-collapsible-content",
+      "blocks": {
+        "collapsible_row_xCkrA4": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_xCkrA4"
+      ],
+      "settings": {
+        "caption": "",
+        "heading": "FAQs",
+        "heading_size": "h1",
+        "heading_alignment": "left",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",
+        "description_alignment": "left",
+        "show--more-question": true,
+        "layout": "none",
+        "color_scheme": "",
+        "container_color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "onhover_switch": false,
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    },
+    "slick_carousel_tPpzVY": {
+      "type": "slick-carousel",
+      "blocks": {
+        "tab_PKifCR": {
+          "type": "tab",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "tab_PKifCR"
+      ],
+      "settings": {
+        "title": "NEW RELEASES",
+        "desc": "Latest LEGO® Light Kits",
+        "collection": "all",
+        "useslider": true,
+        "onhover_switch": false,
+        "enable_quick_add": true
+      }
+    }
+  },
+  "order": [
+    "main",
+    "related-products",
+    "product_image_with_text_HjP3DC",
+    "product_columns_pnH3jF",
+    "product_small_columns_icons_DAM9Af",
+    "product_video_content_jqX3za",
+    "product_image_with_columns_gbnAhV",
+    "1723776056f00b4cbb",
+    "home_cpa_fhPMEF",
+    "product_collapsible_content_xD8GjF",
+    "slick_carousel_tPpzVY"
+  ]
+}

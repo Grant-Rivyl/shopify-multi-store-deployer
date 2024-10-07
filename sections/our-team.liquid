@@ -1,0 +1,54 @@
+<section class="our-team">
+    <div class="page-width">
+        <div class="our-team__title--wrapper">
+            <p class="caption">The Ultimate Build</p>
+            <h2 class="our-team__title no-margin text-color--burnt_orange">Our Team</h2>
+            <p class="subheading text-color--deep_purple">Meet the passionate people that make Light My Bricks™ possible!</p>
+        </div>
+        <div class="grid grid--1-col grid--2-col-tablet  grid--3-col-desktop">
+            {% for team in shop.metaobjects.our_team.values %}
+                {% assign metateam =  team.our_team_references.value %}
+            {% for teammember in metateam %}
+                {% assign profileimage =  teammember.profile | metafield_text %}
+                {% assign profilename =  teammember.profile_name.value %}
+                {% assign profilejobtitle =  teammember.profile_job_title.value %}
+            
+                <div class="grid__item">
+                    <div class="team-member">
+                        <div class="team-member__image--wrapper">
+                            <img 
+                            src="/{{profileimage}}"
+                            class="image"
+                            alt="{{ profileimage.alt | escape }}"
+                            loading="lazy">
+                        </div>
+                        <div class="team-member__content--wrapper">
+                            <h6 class="team-member__name font-weight--bold no-margin text-color--deep_purple">{{profilename}}</h6>
+                        <div class="team-member__profile">{{profilejobtitle}} </div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+            
+            {% endfor %}  
+           
+        </div>
+    </div>
+</section>
+  
+
+{% schema %}
+    {
+      "name": "Our Team",
+      "settings": [
+      ],
+      "blocks": [
+    ],
+      "presets": [
+      {
+        "name": "Our Team",
+        "blocks": []
+      }
+    ]
+    }
+  {% endschema %}

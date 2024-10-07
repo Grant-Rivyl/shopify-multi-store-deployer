@@ -1,0 +1,76 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "main": {
+      "type": "main-faqs",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "faqs_wezUKt": {
+      "type": "faqs",
+      "settings": {
+        "caption": "",
+        "heading": "FAQS",
+        "heading_size": "h2",
+        "heading_alignment": "left",
+        "description": "We’re here to help.",
+        "layout": "none",
+        "color_scheme": "",
+        "container_color_scheme": "",
+        "open_first_collapsible_row": false,
+        "show-left-more-question": true,
+        "show-right-more-question": true,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "full-width": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "slick_carousel_HiTqeL": {
+      "type": "slick-carousel",
+      "settings": {
+        "title": "NEW RELEASES",
+        "desc": "Latest LEGO® Light Kits",
+        "collection": "frontpage",
+        "useslider": true,
+        "onhover_switch": false,
+        "enable_quick_add": false
+      }
+    },
+    "featured_blog_j8mFWA": {
+      "type": "featured-blog",
+      "settings": {
+        "heading": "STAY IN THE KNOW",
+        "heading_size": "h1",
+        "description": "Check out our awesome blogs stay up to date with all things Light My Bricks™.",
+        "blog": "news",
+        "post_limit": 3,
+        "columns_desktop": 3,
+        "color_scheme": "",
+        "show_image": true,
+        "show_date": true,
+        "show_author": false,
+        "onhover_switch": false,
+        "show_view_all": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "faqs_wezUKt",
+    "slick_carousel_HiTqeL",
+    "featured_blog_j8mFWA"
+  ]
+}

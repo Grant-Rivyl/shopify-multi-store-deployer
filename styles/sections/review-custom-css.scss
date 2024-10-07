@@ -1,0 +1,96 @@
+
+.jdgm-rev-widg__header{
+    .jdgm-rev-widg__title {
+        color: #1A0E31;
+        font-family: Rubik;
+        font-size: 0;
+        font-style: normal;
+        font-weight: 900;
+        line-height: 100%;
+        text-transform: uppercase;
+        text-align: left;
+    content: none; 
+    visibility: hidden;
+    padding-bottom: 60px;
+    
+            &::before{
+                content: "What our customers are saying";  
+                visibility: visible;
+                font-size: 48px;
+                font-style: normal; 
+                line-height: 100%; 
+            }
+        }
+    .jdgm-row-stars{
+        .jdgm-rev-widg__summary{
+            @media screen and (min-width: 990px) {
+                align-items: flex-start !important;
+                justify-content: flex-start !important;
+                
+            }
+        }
+    }
+    
+}
+.jdgm-sort-dropdown-wrapper {
+    .jdgm-sort-dropdown{
+        color: #1A0E31 !important;
+    }
+    .jdgm-sort-dropdown-arrow{
+        color: #1A0E31 !important;
+    }
+}
+
+.jdgm-rev{
+    border: none;
+    border-top: 2px solid #FDCF00 !important;  
+  
+    .jdgm-rev__author {
+        color: #1A0E31 !important;
+        text-transform: capitalize;}
+      
+    .jdgm-row-rating{
+        margin-bottom: 20px !important;
+    }
+      
+     
+        .jdgm-rev__content{
+            .jdgm-rev__title{
+                color: var(--Deep-Purple, #1A0E31);
+                font-family: Saira;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 150%;
+            }
+            .jdgm-rev__body{
+                color: var(--Deep-Purple, #1A0E31);
+    
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; 
+            }
+        }
+       
+      
+      .jdgm-rev__icon {
+        &:before{
+            color: #1A0E31 !important;
+        }
+         }
+}
+
+  section{
+    &:has(#judgeme_product_reviews){
+        background: #f5f2fa !important;
+    }
+  }
+    .page-width {
+        &:has(#judgeme_product_reviews) {
+          padding-top: 80px !important;
+          padding-top: 40px !important;
+        }
+      }
+   

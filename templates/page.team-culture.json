@@ -1,0 +1,119 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "image_with_text_video_YPadz8": {
+      "type": "image-with-text-video",
+      "settings": {
+        "title": "BUILDERS AT HEART",
+        "description": "The team at Light My Bricks™ elevates LEGO® products, turning the ordinary into the extraordinary. We exist to showcase imaginative, innovative, and unique ways that your LEGO® journey can truly come to life, be shown off and enjoyed. At the end of the day, we know what you want, because we want it too.",
+        "padding_top": 65,
+        "padding_bottom": 65
+      }
+    },
+    "our_team_Cw4fHY": {
+      "type": "our-team",
+      "settings": {
+      }
+    },
+    "cta_v2_wHfYdH": {
+      "type": "cta-v2",
+      "settings": {
+        "title": "WE'RE HIRING!",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "btn-label": "Open Positions",
+        "url": "",
+        "onhover_switch": false,
+        "padding_top": 65,
+        "padding_bottom": 65
+      }
+    },
+    "text_with_column_cJ6qMB": {
+      "type": "text-with-column",
+      "blocks": {
+        "column_iwzTkV": {
+          "type": "column",
+          "settings": {
+            "block_image": "shopify://shop_images/icon-mag.svg",
+            "block_heading": "On the hunt for more",
+            "block_heading_size": "h5",
+            "block_text": "<p>We exist to showcase imaginative ways your LEGO® journey can come to life, be shown off and enjoyed. As collectors, builders and LEGO® enthusiasts ourselves, we’re constantly on the hunt for more.</p>"
+          }
+        },
+        "column_bfFWFR": {
+          "type": "column",
+          "settings": {
+            "block_image": "shopify://shop_images/icon-block.svg",
+            "block_heading": "Ultimate building experience",
+            "block_heading_size": "h5",
+            "block_text": "<p>Whether you’ve been a part of the LEGO® universe a few hours or a few decades, everyone drawn to LEGO® is invited to join in the fun. Light My Bricks™ makes your build the ultimate experience.</p>"
+          }
+        },
+        "column_nVbAKn": {
+          "type": "column",
+          "settings": {
+            "block_image": "shopify://shop_images/icon-cable.svg",
+            "block_heading": "Seamless simplicity",
+            "block_heading_size": "h5",
+            "block_text": "<p>Step into the world of Light My Bricks™ with seamless ease. Each component is engineered to perfectly fit. No mess. No confusion. Just clear instructions for an enjoyable build from start to finish.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "column_iwzTkV",
+        "column_bfFWFR",
+        "column_nVbAKn"
+      ],
+      "settings": {
+        "heading": "we’re dedicated to more",
+        "heading_size": "h1",
+        "padding_top": 110,
+        "padding_bottom": 110
+      }
+    },
+    "slick_carousel_6nFGwM": {
+      "type": "slick-carousel",
+      "blocks": {
+        "tab_mnNghp": {
+          "type": "tab",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "tab_mnNghp"
+      ],
+      "settings": {
+        "title": "NEW RELEASES",
+        "desc": "Latest LEGO® Light Kits",
+        "collection": "all",
+        "useslider": true,
+        "onhover_switch": false,
+        "enable_quick_add": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "image_with_text_video_YPadz8",
+    "our_team_Cw4fHY",
+    "cta_v2_wHfYdH",
+    "text_with_column_cJ6qMB",
+    "slick_carousel_6nFGwM"
+  ]
+}

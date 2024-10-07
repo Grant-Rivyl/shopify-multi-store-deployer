@@ -1,0 +1,119 @@
+.section-login {
+    background: linear-gradient(180deg, #1A0E31 28.22%, #977BDB 100%);
+    position: relative;
+    padding:100px 0;
+    .img-btm-left {
+        position: absolute;
+        bottom:-6px;
+        left:0;
+        @media screen and (max-width:749px) {
+            display:none;
+        }
+        img {
+            width: 100%;
+            height:100%;
+        }
+    }
+    .img-right-top {
+        position:absolute;
+        top:4%;
+        right:0;
+        @media screen and (max-width:749px) {
+            display:none;
+        }
+        img {
+            width:100%;
+            height:100%;
+        }
+    }
+    .img-right-btm {
+        position:absolute;
+        top:7%;
+        right:0;
+        @media screen and (max-width:749px) {
+            display:none;
+        }
+        img {
+            width:100%;
+            height:100%;
+        }
+    }
+    .section-login-wrapper {
+        display: flex;
+        align-items: center;
+        position: relative;
+        @media screen and (max-width:749px) {
+            
+        }
+        .customer {
+            text-align: left;
+           &.login {
+                background: $white;
+                border-radius: 20px;
+                padding:48px;
+                @media screen and (max-width:749px) {
+                    padding:25px;
+                }
+                h1#login {
+                    line-height: 100%; /* 48px */
+                    text-transform: uppercase;
+                    color: $deep_purple;
+                    margin:0 0 24px;
+                }
+                .login-description {
+                    font-weight: 400;
+                    line-height: 150%;
+                    margin:25px 0 32px; 
+                    color: $deep_purple;
+                } 
+                div {
+                    form {
+                        label {
+                            
+                            color: $deep_purple;
+                        }
+                        .field {
+                            margin-top:8px;
+                            border:1px solid $deep_purple;
+                            border-radius: 10px;
+                            &:focus {
+                                box-shadow: none !important;
+                            }
+                        }
+                        .label-forgot-pass-wrapper {
+                            display:flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            margin-top:24px;
+                            a {
+                                color: $deep_purple; 
+                                text-decoration: underline;
+                            }
+                        }
+                        button {
+                            border-radius: 10px;
+                            margin:24px 0;
+                            &::after {
+                                content:none !important;
+                            }
+                            &.full--width {
+                                width:100%;
+                            }
+                        }
+                        a {
+                            text-decoration: none;
+                            color: $deep_purple;
+                            @include smallFont;
+                            font-weight: 400;
+                            line-height: 150%;
+                            span {
+                                font-weight: 700;
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+                }
+           }
+        }
+    }
+}

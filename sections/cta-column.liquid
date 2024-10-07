@@ -1,0 +1,218 @@
+{% style %}
+    .section-{{ section.id }}-padding {
+        padding-top: {{ section.settings.padding_top | times: 0.59 | round: 0 }}px;
+        padding-bottom: {{ section.settings.padding_bottom | times: 0.23 | round: 0 }}px;
+    }
+
+    @media screen and (min-width: 750px) {
+        .section-{{ section.id }}-padding {
+            padding-top: {{ section.settings.padding_top }}px;
+            padding-bottom: {{ section.settings.padding_bottom }}px;
+        }
+    }
+{% endstyle %}
+
+<section class="cta-column__section section-{{ section.id }}-padding">
+    <div class="page-width">
+        <div class="upper-box">
+            <div class="left-box">
+                <h3 class="{{ section.settings.heading_size }}">{{ section.settings.heading }}</h3>
+                <span class="text-color--white">
+                    {{ section.settings.text }}
+                </span>
+            </div>
+            <div class="right-box">
+                <img src="{{ section.settings.image | image_url }}" alt="">
+            </div>
+        </div>
+        <div class="lower-box">
+            {% for block in section.blocks %}
+                <div class="content-box">
+                    <div class="left-box">
+                        <div class="svg-box">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="25" viewBox="0 0 26 25" fill="none">
+                                <path d="M6.97884 8.8243V16.1887H18.0406V8.8243H6.97884ZM13.9185 3.6366V6.90824H16.7362V3.6366H13.9185ZM8.2833 3.6366V6.90824H11.1009V3.6366H8.2833ZM12.5097 25C5.59612 25 0 19.4082 0 12.5C0 5.59176 5.59612 0 12.5097 0C19.4234 0 25.0195 5.59176 25.0195 12.5C25.0195 19.4082 19.4234 25 12.5097 25Z" fill="#FCCF00"/>
+                            </svg>
+                        </div>
+                        <div class="text-box">
+                            <p class="date text-color--deep_purple">{{ block.settings.block_date }}</p>
+                            <h2 class="{{ block.settings.block_heading_size }} text-color--deep_purple">{{ block.settings.block_heading }}</h2>
+                            <span class="text-color--deep_purple">
+                                {{ block.settings.block_text }}
+                            </span>
+                            <div class="button-box">
+                                {% if block.settings.show_button_1 %}
+                                    <a href="{{ block.settings.block_link_1 }}" class="button button--primary">{{ block.settings.block_button_label_1 }}</a>
+                                {% endif %}
+                                {% if block.settings.show_button_2 %}
+                                    <span class="with-arrow">
+                                        <a href="{{ block.settings.block_link_2 }}" class="button button--white text-color--deep_purple">
+                                            {{ block.settings.block_button_label_2 }}
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+                                                <path d="M9.70697 17.4492L15.414 11.7422L9.70697 6.03516L8.29297 7.44916L12.586 11.7422L8.29297 16.0352L9.70697 17.4492Z" fill="#1A0E31"/>
+                                            </svg>
+                                        </a>
+                                    </span>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right-box">
+                        <img src="{{ block.settings.block_image | image_url : width: 1200 }}" alt="">
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+{% schema %}
+{
+    "name": "CTA Milestone",
+    "settings": [
+        {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image Logo"
+        },
+        {
+            "type": "inline_richtext",
+            "id": "heading",
+            "label": "t:sections.newsletter.blocks.heading.settings.heading.label"
+        },
+        {
+            "type": "select",
+            "id": "heading_size",
+            "options": [
+                {
+                    "value": "h3",
+                    "label": "t:sections.all.heading_size.options__1.label"
+                },
+                {
+                    "value": "h2",
+                    "label": "t:sections.all.heading_size.options__2.label"
+                },
+                {
+                    "value": "h1",
+                    "label": "t:sections.all.heading_size.options__3.label"
+                }
+            ],
+            "default": "h1",
+            "label": "t:sections.all.heading_size.label"
+        },
+        {
+            "type": "richtext",  
+            "id": "text",
+            "default": "t:sections.newsletter.blocks.paragraph.settings.paragraph.default",
+            "label": "t:sections.newsletter.blocks.paragraph.settings.paragraph.label"
+        },
+        {
+            "type": "range",
+            "id": "padding_top",
+            "min": 0,
+            "max": 150,
+            "step": 5,
+            "unit": "px",
+            "label": "t:sections.all.padding.padding_top",
+            "default": 110
+        },
+        {
+            "type": "range",
+            "id": "padding_bottom",
+            "min": 0,
+            "max": 150,
+            "step": 5,
+            "unit": "px",
+            "label": "t:sections.all.padding.padding_bottom",
+            "default": 110
+        }
+    ],
+    "blocks": [
+        {
+            "type": "column",
+            "name": "Milestone Highlight",
+            "settings": [
+                {
+                    "type": "image_picker",
+                    "id": "block_image",
+                    "label": "Image Logo"
+                },
+                {
+                    "type": "text",  
+                    "id": "block_date",
+                    "label": "Format: 'Month, Year'"
+                },
+                {
+                    "type": "inline_richtext",
+                    "id": "block_heading",
+                    "label": "t:sections.newsletter.blocks.heading.settings.heading.label"
+                },
+                {
+                    "type": "select",
+                    "id": "block_heading_size",
+                    "options": [
+                        {
+                            "value": "h3",
+                            "label": "t:sections.all.heading_size.options__1.label"
+                        },
+                        {
+                            "value": "h2",
+                            "label": "t:sections.all.heading_size.options__2.label"
+                        },
+                        {
+                            "value": "h1",
+                            "label": "t:sections.all.heading_size.options__3.label"
+                        }
+                    ],
+                    "default": "h3",
+                    "label": "t:sections.all.heading_size.label"
+                },
+                {
+                    "type": "richtext",  
+                    "id": "block_text",
+                    "default": "t:sections.newsletter.blocks.paragraph.settings.paragraph.default",
+                    "label": "t:sections.newsletter.blocks.paragraph.settings.paragraph.label"
+                },
+                {
+                    "type": "text",
+                    "id": "block_button_label_1",
+                    "label": "Button 1 Label"
+                },
+                {
+                    "type": "url",
+                    "id": "block_link_1",
+                    "label": "Button 1 Link"
+                },
+                {
+                    "type": "checkbox",
+                    "id": "show_button_1",
+                    "label": "Display Button 1",
+                    "default": true
+                },
+                {
+                    "type": "text",
+                    "id": "block_button_label_2",
+                    "label": "Button 2 Label"
+                },
+                {
+                    "type": "url",
+                    "id": "block_link_2",
+                    "label": "Button 2 Link"
+                },
+                {
+                    "type": "checkbox",
+                    "id": "show_button_2",
+                    "label": "Display Button 2",
+                    "default": true
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "name": "CTA Column"
+        }
+    ]
+
+}
+{% endschema %}

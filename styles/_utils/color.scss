@@ -1,0 +1,40 @@
+
+$black:#000000;
+$white:#FFFFFF;
+$deep_purple: #1A0E31;
+$burnt_orange: #E56915;
+$light_purple: #977BDB;
+$yellow: #FDCF00;
+$purple_light: #F5F2FA;
+$grey: #CCCCCC; 
+
+.text-color--black {
+    color: $black;
+}
+
+.text-color--white {
+    color: $white;
+}
+
+.text-color--deep_purple {
+    color: $deep_purple;
+}
+
+.text-color--burnt_orange {
+    color: $burnt_orange;
+}
+
+.text-color--light_purple {
+    color: $light_purple;
+}
+
+.text-color--yellow {
+    color: $yellow;
+}
+
+.text-color--purple_light {
+    color: $purple_light;
+}
+.text-color--grey{
+    color: $grey;
+} 

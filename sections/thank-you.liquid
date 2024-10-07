@@ -1,0 +1,52 @@
+<section class="thank-you">
+    <div class="image--container">
+            <img src="https://cdn.shopify.com/s/files/1/0598/1231/5223/files/jpg.jpg?v=1725559973" alt="">
+        </div>
+    <div class="page-width">
+        
+        <div class="grid grid--1-col grid--2-col-desktop banner--large">
+            <div class="grid__item">
+                <div class="content--wrapper">
+                    <h1 class="section__title text-color--white no-margin">Thank you!</h1>
+                    <p class="section__description text-color--white no-margin">We can’t do this without you!</p>
+                    <div class="button--wrapper">
+                    <a href="/" class="button button--primary {% if section.settings.onhover_switch %} onhover_light {% endif %}">Home</a>
+                    <a href="/pages/faqs" class="button button--secondary">FAQs</a>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% schema %} 
+    {
+      "name": "Thank you",
+      "class": "section",
+      "disabled_on": {
+        "groups": ["header", "footer"]
+      },
+      "settings": [
+        {
+          "type": "checkbox",
+          "id": "onhover_switch",
+          "label": "Onhover switch ( Dark to Light )",
+          "default": false
+        }
+      ],
+      "blocks": [ 
+        
+        
+     
+      ],
+      "presets": [
+        {
+          "name": "Thank you",
+          "blocks": [
+            
+       
+          ]
+        }
+      ]
+    }
+    {% endschema %}

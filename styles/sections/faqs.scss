@@ -1,0 +1,173 @@
+.collapsible-div {
+    background: $purple_light ;
+    .collapsible-content {
+        .collapsible-content__wrapper {
+            .collapsible-fullwidth  {
+                .collapsible-content__header{
+                    margin-bottom: 50px;
+                    @media screen and (max-width:749px) {
+                        margin-bottom: 24px;
+                    }
+                    .collapsible-description {
+                        margin:0;
+                    }
+                }
+                .grid { 
+                    .grid__item {
+                       
+                        .accordion {
+                           /*8 border-radius: 10px;
+                            border: 2px solid $light_purple;
+                            padding: 5px 40px;
+                            margin-bottom: 20px; */
+                            border:0;
+                            padding-bottom: 20px;
+                            @media screen and (max-width:749px) {
+                                padding:10px 0;
+                            }
+                            
+                            .grid-details {
+                                summary {
+                                    border-radius: 10px;
+                                    border: 2px solid $light_purple;
+                                    padding: 20px 40px;
+                                    @media screen and (max-width:749px) {
+                                        padding:10px;
+                                    }
+                                    &:hover {
+                                        background:transparent;
+                                    }
+                                    .accordion__title{
+                                        @include fontSize(medium);
+                                    }
+                                    .accordion__title {
+                                        max-width: 100%;
+                                        font-weight: 700 !important;
+                                        
+                                        @include fontIntern;
+                                        @include colorDeeppurple;
+                                       
+                                    }
+                                    svg { 
+
+                                    }
+                                }
+                                .accordion__content {
+                                   margin:0;
+                                    border-radius: 10px;
+                                    @media screen and (max-width:749px) {
+                                        padding-bottom: 0;
+                                    }
+                                    .accordion {
+                                        
+                                        padding: 10px 0 0;
+                                        border:none;
+                                        @media screen and (max-width:749px) {
+                                            padding:10px;
+                                        }
+                                        details {
+                                            padding:0 40px;
+                                            @media screen and (max-width:749px) {
+                                                padding:0;
+                                            }
+                                        }
+                                        summary {
+                                            border:none;
+                                            background-color: $white;
+                                            border-radius: 10px;
+                                            &.not-clickable {
+                                                pointer-events: none;
+                                            }
+                                            .accordion__title {
+                                                font-weight: 500 !important;
+                                                @include fontSaira;
+                                            }
+                                        }
+                                        .accordion__content{
+                                            @include fontSize(medium);
+                                        }
+                                        .accordion__content {
+                                            background-color: $purple_light;
+                                            padding:24px 40px;
+                                            font-weight: 400 !important;
+                                            
+                                            @include colorDeeppurple;
+                                            @media screen and (max-width:749px) {
+                                                padding: 20px 20px 10px;
+                                            }
+                                            @media screen and (max-width:400px) {
+                                                padding: 20px 0 10px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .more-question-wrapper {
+                    display:flex;
+                    justify-content: start;
+                    align-items: start;
+                    margin-top:24px;
+                    @media screen and (max-width:990px) {
+                        flex-direction: column;
+                    }
+                    
+                    .more-question-left-inner {
+                        width:50%;
+                        padding:40px;
+                        background-color: $white;
+                        border-radius: 24px;
+                        @media screen and (max-width:990px) {
+                           width:100%;
+                        }
+                        @media screen and (max-width:749px) {
+                            padding: 20px;
+                        }
+                        .more-question-left-wrapper {
+                            .more-question-left-heading {
+                                margin:0 0 16px;
+                                @include colorBurntorange;
+                            }
+                            .more-question-left-description {
+                                margin:0 0 24px;
+                                
+                            }
+                            .more-question-left-description{
+                                @include fontSize(medium);
+                            }
+                        }
+                    }
+                    .more-question-right-inner {
+                     
+                        width:50%;
+                        padding:40px;
+                        background-color: $white;
+                        border-radius: 24px;
+                        @media screen and (max-width:990px) {
+                            width:100%;
+                         }
+                         @media screen and (max-width:749px) {
+                            padding: 20px;
+                            
+                        }
+                        .more-question-right-wrapper {
+                            .more-question-right-heading {
+                                margin:0 0 16px;
+                                 @include colorBurntorange;
+                            }
+                            .more-question-right-description {
+                               
+                                margin:0 0 24px;
+                            }
+                            .more-question-right-description{
+                                @include fontSize(medium);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

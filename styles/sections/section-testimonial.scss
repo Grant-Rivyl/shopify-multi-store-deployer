@@ -1,0 +1,197 @@
+.testimonial .testimonail-image {
+    width:135px;
+    display: block;
+    margin: auto;
+}
+
+.stars__wrapper{
+    display: flex;
+    justify-content: start;
+    padding-top: 0;
+    padding-bottom:32px;
+    column-gap:4px;
+
+    @media screen and (max-width:767px) {
+        padding-bottom: 24px;
+    }
+    .description { 
+        p.title{
+            color:#ffffff; 
+        }
+        
+    }
+}
+section.testimonial{
+    position: relative;
+    background-color:$purple_light;
+    .testimonial-content-inner{
+        text-align:left;
+        .testimonial-info-wrapper {
+            .author-name {
+                @include fontSaira;
+            }
+            .author-name {
+                @include fontSize(medium);
+            }
+        } 
+    }
+    .testimonial-content{ 
+        text-align:left;
+    }
+    .left-under-image-wrapper {
+        position:absolute;
+        left:0;
+        bottom:-360px;
+        z-index: 1;
+        @media screen and (max-width:767px) {
+            left:auto;
+            right:0;
+            bottom:-50px;
+            rotate:180deg;
+        }
+        img {
+            width:100%;
+            height:100%;
+            @media screen and (max-width:767px) {
+                width:170px;
+                height:auto;
+            }
+        }
+    }
+    .right-under-image-wrapper {
+        position:absolute;
+        right:0;
+        bottom:0;
+        z-index: 1;
+        @media screen and (max-width:767px) {
+            display:none;
+        }
+        img {
+            width:100%;
+            height:100%;
+        }
+    }
+    .profile-wrapper{
+        padding:43px 40px;
+        height: 100%;
+        border-radius: 10px;
+        display:flex;
+        align-items: center;
+        background: $white !important;
+        position: relative;
+        z-index: 2;
+        margin-right: 50px;
+        @media screen and (max-width:767px) {
+            margin-right:0; 
+        }
+        .testimonial{
+            display:flex;
+            flex-direction: column-reverse;
+            .testimonial-content-inner {
+                display:flex;
+                justify-content: flex-start;
+                align-items: center;
+                row-gap:16px;
+                column-gap:16px;
+                
+                .testimonial-content {
+                    .description  {
+                        
+                        text-align: left;
+                        @include smallFont;
+                        p {
+                            text-align: left;
+                            @include smallFont;
+                        } 
+                    }
+                }
+                .logo-wrapper {
+                    padding-top:0;
+                    .logo-image {
+                        .image-wrap {
+                            height:56px;
+                            width:56px;
+                            border-radius: 100%;
+                            padding-bottom: 0;
+                        }
+                    }
+                }
+            }
+            p.title,p.description{
+                
+                text-align:center;
+            }
+        } 
+    }
+}
+
+
+.section--title__wrapper{
+    margin-bottom:34px;
+    position:relative;
+
+
+    h2.section--title {
+        margin-top:0;
+        margin-bottom: 10px;
+    }
+
+}
+.logo-wrapper{
+    display:flex; 
+    justify-content: center;
+    padding-top: 15px;
+        .logo-image{
+            max-width: 120px;
+            width: 100%;
+
+            .image-wrap {
+                img {
+                    width:56px;
+                    height:56px; 
+                    border-radius:100%;
+                } 
+            }
+        }
+    }
+
+.testimonial {
+    overflow: hidden;
+    .page-width {
+        .testimonial-slider {
+            
+            .slick-prev {
+                z-index: 2;
+                right:75px;
+                bottom:-80px;
+                top:auto;
+                left:auto;
+            }
+            .slick-next {
+                z-index: 2;
+                right: 23px;
+                bottom:-80px;
+                top:auto;
+            
+            }
+            .slick-dots {
+                bottom: -70px;
+                align-items: start;
+                justify-content: start;
+                @media screen and (max-width:767px) {
+                    bottom: -50px;
+                    text-align: center;
+                    justify-content: center;
+                }
+            }
+            .slick-slide {
+                margin: 0 25px;
+            }
+          
+            /* the parent */
+            .slick-list {
+                margin: 0 -25px;
+            }
+        }
+    }
+}

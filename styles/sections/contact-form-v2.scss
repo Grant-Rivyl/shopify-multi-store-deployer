@@ -1,0 +1,194 @@
+section.contact-form-v2__section {
+    position: relative;
+    .image-wrapper {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        line-height: 0;
+        z-index: 0;
+    }
+    .page-width {
+        position: relative;
+        .contact-form-v2__wrapper {
+            display: flex;
+            justify-content: space-between;
+            .left-side-box {
+                flex: 0 0 50%;
+                p, h1, span > p {
+                    margin-top: initial;
+                }
+                .upper-text {
+                    line-height: 150%;
+                    font-weight: 600;
+                }
+                p {
+                    margin-bottom: 15px;
+                }
+                p{
+                    @include regularFont;
+                }
+                h1 {
+                    margin-bottom: 25px;
+                }
+                span > p {
+                    margin-bottom: 40px;
+                }
+                span > p{
+                    @include fontSize(medium);
+                }
+                .with-icon {
+                    display: flex;
+                    column-gap: 15px;
+                    margin-bottom: 15px;
+                    svg {
+                        color: $deep_purple;
+                    }
+                    p {
+                        margin: initial;
+                    }
+                }
+            }
+            .right-side-box {
+                flex: 0 0 50%;
+                form {
+                    .field-row > .half-field > .field-label,
+                    .full-field > .field-label {
+                        display: flex;
+                        flex-direction: column;
+                        .field-input, .field-select {
+                            border: 1px solid $deep_purple;
+                            color: $deep_purple;
+                            margin-top: 10px;
+                            padding: 12px;
+                            border-radius: 10px;
+                            &:focus-visible {
+                                outline: initial;
+                                outline-offset: initial;
+                                box-shadow: initial;
+                            }
+                        }
+                    }
+                    .field-row {
+                        display: flex;
+                        column-gap: 25px;
+                        margin-bottom: 25px;
+                        .half-field {
+                            width: 50%;
+                        }
+                    }
+                    .full-field {
+                        margin-bottom: 25px;
+                        p {
+                            margin-top: initial;
+                            margin-bottom: 15px;
+                        }
+                        .contact-radio__box {
+                            display: grid;
+                            grid-template-columns: 1fr 1fr;
+                            row-gap: 15px;
+                            .drop-radio__label {
+                                input {
+                                    margin-left: initial;
+                                }
+                            }
+                            @media screen and ( max-width: 320px ) {
+                                grid-template-columns: 1fr;
+                                row-gap: 5px;
+                            }
+                        }
+                        .contact-comment__box {
+                            .field-label {
+                                .field-input {
+                                    border: 1px solid $deep_purple;
+                                    color: $deep_purple;
+                                    margin-top: 10px;
+                                    padding: 12px;
+                                    border-radius: 10px;
+                                    min-height: 25rem;
+                                }
+                            }
+                        }
+                    }
+                    .contact-agree__row {
+                        margin-bottom: 40px;
+                        .field-label {
+                            a {
+                                color: $deep_purple !important;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media screen and ( max-width: 991px ) {
+        .image-wrapper {
+            display: none;
+        }
+        .page-width {
+            .contact-form-v2__wrapper {
+                flex-direction: column;
+                row-gap: 25px;
+            }
+        }
+    }
+    @media screen and ( max-width: 749px ) {
+        .page-width {
+            .contact-form-v2__wrapper {
+                .left-side-box {
+                    p {
+                        margin-bottom: 10px;
+                    }
+                    h1 {
+                        margin-bottom: 15px;
+                    }
+                    span > p {
+                        margin-bottom: 20px;
+                    }
+                    .with-icon {
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+        }
+    }
+    @media screen and ( max-width: 480px ) {
+        .page-width {
+            .contact-form-v2__wrapper {
+                .right-side-box {
+                    form {
+                        .field-row {
+                            flex-direction: column;
+                            margin-bottom: initial;
+                            .half-field {
+                                width: 100%;
+                                .field-label {
+                                    margin-bottom: 10px;
+                                    .field-input {
+                                        margin-top: initial;
+                                    }
+                                }
+                            }
+                        }
+                        .full-field {
+                            margin-bottom: 10px;
+                            .field-label {
+                                margin-bottom: initial;
+                            }
+                            .contact-comment__box {
+                                .field-label {
+                                    .field-input {
+                                        margin-top: initial;
+                                    }
+                                }
+                            }
+                        }
+                        .contact-agree__row {
+                            margin-bottom: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

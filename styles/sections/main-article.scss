@@ -1,0 +1,286 @@
+.article-template {
+    background: $purple_light;
+    .article-line {
+        display: block;
+        background: $light_purple;
+        width:0%;
+        border-radius: 0px 10px 10px 0px;
+        height: 16px;
+        position: sticky;
+        top: 0;
+        z-index: 2;
+
+        @media screen and (max-width:767px) {
+            display:none;
+        } 
+    }
+    .header-wrapper {
+        background: $deep_purple;
+        margin-top:0 !important;
+        padding-top: 100px;
+        padding-bottom: 100px;
+        @media screen and (max-width: 749px) {
+          padding-bottom: 64px;
+          padding-bottom: 64px;
+        }
+        header {
+            margin-top:0 !important;
+            .article__head-label {
+                @include  colorBurntorange;
+                margin:0 0 24px;
+            }
+            .article-template__title {
+                @include colorBurntorange;
+                text-transform: uppercase;
+                line-height: 100%;
+                margin:0 0 24px;
+            }
+            span {
+                margin:20px 0;
+                time {
+                    @include colorBurntorange;
+                }
+            }
+            .author-info-inner {
+                display:flex;
+                justify-content: start;
+                align-items:center;
+                column-gap:16px;
+                margin-bottom: 48px;
+                @media screen and (max-width: 749px) {
+                    margin-bottom: 32px;
+                }
+                .author-info-wrapper {
+                    .caption-with-letter-spacing {
+                        font-weight: 600;
+                        line-height: 150%;
+                        color: $white;
+                        .caption-with-letter-spacing {
+                            text-transform: none;
+                        }
+                    }
+                    .caption-with-letter-spacing{
+                        @include regularFont;
+                    }
+                    .author-job-wrapper {
+                        display:flex;
+                        column-gap: 8px;
+                        
+                        .job-title {
+                            margin:0;
+                            color: $white;
+                        }
+                        .company-name {
+                            margin:0;
+                            color: $white;
+                        }
+                    }
+                }
+                .author-img {
+                    img {
+                        width:56px;
+                        height:56px;
+                        border-radius: 56px;
+                    }
+                 
+                }
+            }
+            .article__list-social {
+                justify-content: flex-start;
+                margin-bottom: 80px;
+                @media screen and (max-width: 749px) {
+                    margin-bottom: 48px;
+                }
+            }
+            .article-template__hero-container  {
+                .article-template__hero-custom {
+                    width:100%;
+                    height:600px;
+                }
+                div {
+                    img {
+                        object-fit: cover;
+                        border-radius: 20px;
+                      
+                    }
+                } 
+            }
+         
+           
+
+        }
+
+    }
+    .article-template__content {
+        
+        margin-left:auto;
+        margin-right: auto;
+        section.gradient{
+            border-radius: 20px;  
+            overflow: hidden;
+        }
+        .product__info-wrapper{
+            padding:24px!important;
+            
+            
+            h3.product__title {
+                font-weight:500;
+                @include extralargefont;
+                text-transform: none;
+                margin-bottom: 0px !important;
+                padding-bottom: 0px;
+                &:before{
+                    content:initial;
+                }
+            }
+            .product__description {
+                margin-top: 0px;
+                @include smallFont;
+            }
+        }
+        img {
+            border:none;
+        }
+        
+        h2, h3, h4, h5 {
+            @include colorDeeppurple;
+            margin-bottom: 16px;
+        }
+        h6 {
+            @include colorDeeppurple;
+            margin-bottom: 16px;
+            span {
+                @include colorDeeppurple;
+            }
+        }
+        p, span  {
+            @include colorDeeppurple;
+        }
+    }
+    .conclusion-wrapper {
+        padding-top:24px;
+       margin: 0 auto 64px;
+       @media screen and (max-width: 749px) {
+            margin-bottom: 32px;
+        }
+        .conclusion-title {
+            font-weight: 500;
+            margin:0 0 20px;
+            @include colorDeeppurple;
+            @media screen and (max-width: 749px) {
+                font-weight: 900;
+            }
+        }
+        .conclusion-description {
+            line-height: 150%;
+            @include colorDeeppurple;
+            p {
+                @include colorDeeppurple;
+            }
+        }
+    }
+    .article-footer-inner {
+        margin-left:auto;
+        margin-right: auto;
+        .article-footer-wrapper {
+            overflow: hidden;
+            .article-footer-top-content {
+                display:flex;
+                justify-content: space-between; 
+               @media screen and (max-width:767px) {
+                justify-content: start;
+                flex-direction: column;
+                row-gap:32px;
+               }
+                .social-links-wrapper {
+                    width:45%;
+                    @media screen and (max-width:740px) {
+                        width:100%;
+                    }
+                    .share-title{
+                        @include fontSize(medium);
+                    }
+                    .share-title {
+                        font-weight: 600;
+                      
+                        margin-bottom: 10px;
+                        a {
+                            text-decoration: none;
+                            color: $deep_purple;
+                        }
+                    }
+                    .article__list-social {
+                        justify-content: start;
+                    }
+                } 
+                .tags-wrapper {
+                    .tags {
+                        display:flex;
+                        justify-content: center;
+                        column-gap: 16px;
+                        row-gap: 16px;
+                        flex-wrap: wrap;
+                        a{
+                            @include fontSize(medium);
+                        }
+                        a {
+                            
+                            font-weight: 500;
+                            line-height: 150%;
+                            @include fontSaira;
+                            text-decoration: none;
+                            @include colorDeeppurple;
+                        }
+                    }
+                }
+            }
+            .line-divider {
+                width: 100%;
+                height: 1px;
+                background: $deep_purple;
+                margin: 48px 0;
+            }
+            .article-footer-bottom-content {
+                .author-info-inner {
+                    display:flex;
+                    justify-content: start;
+                    align-items: center;
+                    column-gap:16px;
+                    
+                    .author-info-wrapper {
+                        .caption-with-letter-spacing {
+                            font-weight: 600;
+                            line-height: 150%;
+                            color: $deep_purple;
+                            text-transform: none;
+                        }
+                        .caption-with-letter-spacing{
+                            @include regularFont;
+                        }
+                        .author-job-wrapper {
+                            display:flex;
+                            column-gap: 8px;
+                            
+                            .job-title {
+                                color: $deep_purple;
+                                margin:0;
+                            }
+                            .company-name {
+                                color: $deep_purple;
+                                margin:0;
+                            }
+                        }
+                    }
+                    .author-img {
+                        img {
+                            width:56px;
+                            height:56px;
+                            border-radius: 56px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}

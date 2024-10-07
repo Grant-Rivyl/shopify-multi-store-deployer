@@ -1,0 +1,56 @@
+section.text-with-column__section {
+    background-color: $purple_light;
+    .page-width {
+        .text-width-column__wrapper {
+            .header-box {
+                margin-bottom: 45px;
+                h1 {
+                    margin: initial;
+                }
+                @media screen and ( max-width: 749px ) {
+                    margin-bottom: 25px;
+                }
+            }
+            .content-wrapper {
+                flex-wrap: wrap;
+                --grid-desktop-horizontal-spacing:48px;
+                --grid-desktop-vertical-spacing:48px;
+                .content-box {
+                  
+                    text-align: center;
+                    background-color: $white;
+                    border-radius: 20px;
+                    padding: 50px 35px;
+
+                    img {
+                        width: 100%;
+                        height: 190px;
+                    }
+                    .text-box {
+                        text-align: left;
+                        margin-top: 25px;
+                        h1 {
+                            margin-top: initial;
+                            margin-bottom: 10px;
+                        }
+                        span > p {
+                            margin: initial;
+                        }
+                    }
+                }
+                @media screen and ( max-width: 991px ) {
+                    .content-box {
+                        width: initial;
+                        height: initial;
+                    }
+                }
+                @media screen and ( max-width: 749px ) {
+                    gap: 25px;
+                    .content-box {
+                        padding: 25px 20px;
+                    }
+                }
+            }
+        }
+    }
+}

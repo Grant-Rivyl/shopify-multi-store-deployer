@@ -1,0 +1,107 @@
+{% assign metadata = product.metafields.custom.product_image_with_columns.value %}
+{% assign metafields = product.metafields.custom %}
+
+<section class="product-image-columns">
+    <div class="page-width">
+        <div class="grid columns__grid grid--1-col 
+        {% if metafields.four_column_image != null %}
+        grid--2-col-desktop
+        {% endif %}
+        ">
+        <div class="grid__item">
+            <div class="columns-wrapper grid grid--2-col grid--2-col-tablet grid--2-col-desktop"> 
+                {% for block in section.blocks %}
+                    <div class="column grid__item">
+                        {% if block.settings.svg != null %}
+                            <img src="{{ block.settings.svg |  image_url: width: 50 }}" alt="{{ block.settings.svg.name}}">
+                        {% else %}
+                            {% render 'icon-gear' %}
+                        {% endif %}
+                    <h5 class="column--title no-margin text-color--yellow">{{ block.settings.title }}</h5>
+                    <p class="description text-color--white font-text--regular">{{ block.settings.desc }} </p>
+                </div>
+                {% endfor %}
+                {% comment %} <div class="column grid__item">
+                    <img src="{{ metadata.first_box_icon | metafield_text}}" alt="{{ metadata.image.name}}">
+                    <h5 class="column--title no-margin text-color--yellow">{{ metadata.first_box_title }}</h5>
+                    <p class="description text-color--white font-text--regular">{{ metadata.first_box_description }} </p>
+                </div>
+                <div class="column grid__item">
+                    <img src="{{ metadata.first_box_icon | metafield_text}}" alt="{{ metadata.image.name}}">
+                    <h5 class="column--title no-margin text-color--yellow">{{ metadata.first_box_title }}</h5>
+                    <p class="description text-color--white font-text--regular">{{ metadata.first_box_description }} </p>
+                </div>
+                <div class="column grid__item">
+                    <img src="{{ metadata.first_box_icon | metafield_text}}" alt="{{ metadata.image.name}}">
+                    <h5 class="column--title no-margin text-color--yellow">{{ metadata.first_box_title }}</h5>
+                    <p class="description text-color--white font-text--regular">{{ metadata.first_box_description }} </p>
+                </div>
+                <div class="column grid__item">
+                    <img src="{{ metadata.first_box_icon | metafield_text}}" alt="{{ metadata.image.name}}">
+                    <h5 class="column--title no-margin text-color--yellow">{{ metadata.first_box_title }}</h5>
+                    <p class="description text-color--white font-text--regular">{{ metadata.first_box_description }} </p>
+                </div> {% endcomment %}
+            </div>
+        </div>
+        {% if metafields.four_column_image != null %}
+        <div class="grid__item">
+            <div class="image-wrapper">
+                <img src="{{ metafields.four_column_image | metafield_text}}" alt="">
+            </div>
+        </div>
+    {% endif %}
+    </div>
+    </div>
+</section>
+
+{% schema %}
+    {
+      "name": "Product Image With Col",
+      "tag": "section",
+      "class": "section",
+      "disabled_on": {
+        "groups": ["header", "footer"]
+      },
+      "settings": [
+       
+      ],
+      "blocks": [
+        {
+      "type": "columns",
+      "name": "Columns",
+      "limit": 4,
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "default": "t:sections.announcement-bar.blocks.announcement.settings.text.default",
+          "label": "t:sections.announcement-bar.blocks.announcement.settings.text.label"
+        },
+        {
+            "type": "image_picker",
+            "id": "svg",
+            "label": "Icon"
+        },
+        {
+            "type": "text",
+            "id": "title",
+            "label": "Title",
+            "default":"Build your way"
+        },
+        {
+            "type": "text",
+            "id": "desc",
+            "label": "Description",
+            "default":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. "
+        }
+        
+      ]
+    }
+      ],
+      "presets": [
+        {
+          "name": "Product Image With Col"
+        }
+      ]
+    }
+    {% endschema %}

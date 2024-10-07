@@ -1,0 +1,48 @@
+.cta-v2 {
+    background: linear-gradient(93deg, #977BDB 18.97%, #1A0E31 88.84%);
+    position: relative;
+    @media screen and (max-width:749px) {
+        background: $purple_light;
+    }
+    .cta-v2-image--wrapper {
+        position: absolute;
+        top:0;
+        right:100px;
+        @media screen and (max-width:767px) {
+            right:20px;
+            display: none;
+        }
+        @media screen and (max-width:600px) {
+            
+        }
+    }
+    .page-width {
+        .cta-v2-wrapper {
+            display:flex;
+            position: relative;
+            z-index: 2;
+            .cta-v2-left-content {
+                width:50%;
+                @media screen and (max-width:767px) {
+                    width:100%;
+                }
+                .title {
+                    color:$deep_purple;
+                    margin:0 0 16px;
+                }
+                .description {
+                    color:$deep_purple;
+                    
+                    margin:0 0 40px;
+                }
+                .description{
+                    @include  mediumFont;
+                }
+                a {
+
+                }
+            }
+
+        }
+    }
+}

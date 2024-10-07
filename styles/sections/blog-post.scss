@@ -1,0 +1,27 @@
+.blog {
+    .title-wrapper-with-link {
+        margin:0 0 16px;
+    }
+    *.title-wrapper--self-padded-tablet-down {
+        padding-left: 0;
+    }
+    .featured-blog-des {
+        margin-bottom:62px;
+        font-size:18px;
+        line-height:145%;
+
+        @media screen and (max-width:749px) {
+            margin-bottom: 48px;
+        }
+    }
+    .slider-button{
+        position: absolute;
+        z-index: 1;
+        &.slider-button--prev{
+            left: 10px;
+        }
+        &.slider-button--next{
+            right: 10px;
+        }
+    }
+}

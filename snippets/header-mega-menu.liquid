@@ -1,0 +1,166 @@
+{% comment %}
+  Renders a megamenu for the header.
+
+  Usage:
+  {% render 'header-mega-menu' %}
+{% endcomment %}
+<style>
+    .mega-menu-connector {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.mega-menu-connector:after {
+  content: '';
+  width: 100%;
+  position: absolute;
+  opacity: 0;
+  padding-top: 2.4rem;
+  padding-bottom: 2.4rem;
+}
+</style>
+<nav class="header__inline-menu">
+  <ul class="list-menu list-menu--inline" role="list">
+    {%- for link in section.settings.menu.links -%}
+      <li>
+        {%- if link.links != blank -%}
+          <header-menu>
+            <details id="Details-HeaderMenu-{{ forloop.index }}" class="mega-menu">
+              <div class="mega-menu-connector"><holder></holder></div>
+              <summary
+                id="HeaderMenu-{{ link.handle }}"
+                class="header__menu-item list-menu__item link focus-inset"
+              >
+                <span
+                  {%- if link.child_active %}
+                    class="header__active-menu-item"
+                  {% endif %}
+                >
+                  {{- link.title | escape -}}
+                </span>
+                {% render 'icon-caret' %}
+              </summary>
+              <div
+                id="MegaMenu-Content-{{ forloop.index }}"
+                class="mega-menu__content color-{{ section.settings.menu_color_scheme }} gradient motion-reduce global-settings-popup"
+                tabindex="-1"
+              >
+                <ul
+                  class="mega-menu__list page-width{% if link.levels == 1 %} mega-menu__list--condensed{% endif %}"
+                  role="list"
+                >
+                      
+                  {%- for childlink in link.links -%}
+                    
+                    <li {% if childlink.url contains '/instruction' or childlink.url contains '/user-guide' %}
+                      class ="underline--specific"
+                      {% endif %}>
+                      <a
+                        id="HeaderMenu-{{ link.handle }}-{{ childlink.handle }}"
+                        href="{{ childlink.url }}"
+                        class="mega-menu__link mega-menu__link--level-2  link{% if childlink.current %} mega-menu__link--active{% endif %}"
+                        {% if childlink.current %}
+                          aria-current="page"
+                        {% endif %}
+                      >
+                      
+                        {{ childlink.title | escape }}
+                      </a>
+                      {% if childlink.url contains '/instruction'%}
+                        <p class="font-weight--semi-bold text-color--white font-text--small">Access step-by-step instructions on how to assemble your Light My Bricks light kit.</p>
+                      {% elsif childlink.url contains '/user-guide' %}
+                        <p class="font-weight--semi-bold text-color--white font-text--small">A general guide on how to handle and assemble Light My Bricks components</p>
+                      {% endif %}
+                      {%- if childlink.links != blank -%}
+                        {%- assign grandchild_link_count = 0 -%}
+                          {%- for grandchildlink in childlink.links -%}
+                            {%- assign grandchild_link_count = grandchild_link_count | plus: 1 -%}
+                            
+                        {%- endfor -%}
+                        {% comment %} <p class = " font-weight--semi-bold text-color--white font-text--smal">{{ grandchild_link_count }}</p> {% endcomment %}
+                        <ul class="list-unstyled {% if grandchild_link_count > 7 %} ul--two-columns {% endif %}" role="list">
+                          {%- for grandchildlink in childlink.links -%}
+                            <li>
+                              <a
+                                id="HeaderMenu-{{ link.handle }}-{{ childlink.handle }}-{{ grandchildlink.handle }}"
+                                href="{{ grandchildlink.url }}"
+                                class="mega-menu__link link{% if grandchildlink.current %} mega-menu__link--active{% endif %}"
+                                {% if grandchildlink.current %}
+                                  aria-current="page"
+                                {% endif %}
+                              >
+                                {{ grandchildlink.title | escape }}
+                              </a>
+                            </li>
+                          {%- endfor -%}
+                        </ul>
+                      {%- endif -%}
+                    </li>
+                    {% if forloop.length == 2 and forloop.last %}
+                      <li></li>
+                    {% endif %}
+                  {%- endfor -%}
+                  
+                </ul>
+                <div class="mega-menu-support">
+                    <p class="support-title">Support</p> 
+                    <div class="mega-button--wrapper">
+                      <a href="{{ section.settings.chat_link }} " target="_blank" class="button button--primary-support btn-primary-support"> 
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                      <path d="M7 7H17V9H7V7ZM7 11H14V13H7V11Z" fill="#1A0E31"/>
+                      <path d="M20 2H4C2.897 2 2 2.897 2 4V22L7.333 18H20C21.103 18 22 17.103 22 16V4C22 2.897 21.103 2 20 2ZM20 16H6.667L4 18V4H20V16Z" fill="#1A0E31"/>
+                      </svg> 
+                      Chat Customer Support
+                    </a>
+                    <a href="{{ section.settings.reward_link }}" class="button button--tertiary btn-tertiary-support">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M21 4H18V3C18 2.73478 17.8946 2.48043 17.7071 2.29289C17.5196 2.10536 17.2652 2 17 2H7C6.73478 2 6.48043 2.10536 6.29289 2.29289C6.10536 2.48043 6 2.73478 6 3V4H3C2.73478 4 2.48043 4.10536 2.29289 4.29289C2.10536 4.48043 2 4.73478 2 5V8C2 12.31 3.799 14.91 6.819 15.012C7.26111 15.7718 7.86475 16.4252 8.58722 16.926C9.3097 17.4267 10.1334 17.7627 11 17.91V20H9V22H15V20H13V17.91C13.8664 17.7621 14.6899 17.4259 15.4122 16.9252C16.1346 16.4245 16.7384 15.7714 17.181 15.012C20.201 14.91 22 12.31 22 8V5C22 4.73478 21.8946 4.48043 21.7071 4.29289C21.5196 4.10536 21.2652 4 21 4ZM4 8V6H6V12.83C4.216 12.078 4 9.299 4 8ZM12 16C9.794 16 8 14.206 8 12V4H16V12C16 14.206 14.206 16 12 16ZM18 12.83V6H20V8C20 9.299 19.784 12.078 18 12.83Z" fill="#FDCF00"/>
+                      </svg>
+                      Rewards 
+                    </a>
+                    <a href="{{ section.settings.contact_us }}" class="button button--secondary reverse-color">
+                      <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_10771_16182)">
+                        <path d="M11.9146 3.95817C12.6878 4.10903 13.3985 4.48721 13.9555 5.04429C14.5126 5.60136 14.8908 6.31201 15.0417 7.08525M11.9146 0.791504C13.5211 0.969974 15.0192 1.68939 16.1629 2.83163C17.3065 3.97388 18.0278 5.47105 18.2083 7.07734M17.4167 13.3948V15.7698C17.4176 15.9903 17.3724 16.2086 17.2841 16.4106C17.1957 16.6126 17.0662 16.7939 16.9037 16.943C16.7413 17.092 16.5495 17.2055 16.3406 17.2761C16.1317 17.3468 15.9104 17.373 15.6908 17.3532C13.2547 17.0885 10.9147 16.256 8.85875 14.9228C6.94595 13.7073 5.32422 12.0856 4.10875 10.1728C2.77081 8.10746 1.93819 5.75604 1.67833 3.309C1.65855 3.09008 1.68457 2.86944 1.75473 2.66112C1.82489 2.45281 1.93766 2.26138 2.08585 2.09904C2.23405 1.93669 2.41443 1.80698 2.6155 1.71817C2.81657 1.62935 3.03393 1.58338 3.25375 1.58317H5.62875C6.01295 1.57939 6.38542 1.71544 6.67673 1.96597C6.96804 2.21649 7.15831 2.5644 7.21208 2.94484C7.31232 3.70489 7.49823 4.45116 7.76625 5.16942C7.87276 5.45278 7.89581 5.76073 7.83267 6.05678C7.76953 6.35284 7.62285 6.62459 7.41 6.83984L6.40458 7.84525C7.53156 9.82723 9.17261 11.4683 11.1546 12.5953L12.16 11.5898C12.3752 11.377 12.647 11.2303 12.9431 11.1672C13.2391 11.104 13.5471 11.1271 13.8304 11.2336C14.5487 11.5016 15.2949 11.6875 16.055 11.7878C16.4396 11.842 16.7908 12.0357 17.0418 12.332C17.2929 12.6283 17.4263 13.0066 17.4167 13.3948Z" stroke="#1A0E31" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </g>
+                        <defs>
+                        <clipPath id="clip0_10771_16182">
+                        <rect width="19" height="19" fill="white"/>
+                        </clipPath>
+                        </defs>
+                        </svg>
+
+                        Contact 
+                    </a> 
+                    </div>
+                    <div class="email-btn--wrapper">
+                      <p class="mega-menu-support-email no-margin">Socials</p>
+                      {%- render 'social-icons', class: 'mega-menu__list-social' -%}
+                    </div>
+
+                  </div>
+              </div>
+            </details>
+          </header-menu>
+        {%- else -%}
+          <a
+            id="HeaderMenu-{{ link.handle }}"
+            href="{{ link.url }}"
+            class="header__menu-item list-menu__item link link--text focus-inset"
+            {% if link.current %}
+              aria-current="page"
+            {% endif %}
+          >
+            <span
+              {%- if link.current %}
+                class="header__active-menu-item"
+              {% endif %}
+            >
+              {{- link.title | escape -}}
+            </span>
+          </a>
+        {%- endif -%}
+      </li>
+    {%- endfor -%}
+  </ul>
+</nav>

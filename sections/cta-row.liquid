@@ -1,0 +1,189 @@
+{% style %}
+    .section-{{ section.id }}-padding {
+        padding-top: {{ section.settings.padding_top | times: 0.40 | round: 0 }}px;
+        padding-bottom: {{ section.settings.padding_bottom | times: 1 | round: 0 }}px;
+    }
+
+    @media screen and (min-width: 750px) {
+        .section-{{ section.id }}-padding {
+            padding-top: {{ section.settings.padding_top }}px;
+            padding-bottom: {{ section.settings.padding_bottom }}px;
+        }
+    }
+    @media screen and (min-width:750px) {
+        .content-box {
+        opacity: 1 !important;
+      
+    }
+    }
+
+{% endstyle %}
+
+<section class="cta-row__section section-{{ section.id }}-padding">
+    <div class="page-width">
+        <div class="upper-box">
+            <div class="left-box">
+                <h3 class="{{ section.settings.heading_size }} uppercase">{{ section.settings.heading }}</h3>
+                <span class="text-color--white">
+                    {{ section.settings.text }}
+                </span>
+            </div>
+            <div class="right-box">
+                <img src="{{ section.settings.image | image_url }}" alt="">
+            </div>
+        </div>
+        <div class="lower-box lower-box-row" id="lower-box-row">
+            {% for block in section.blocks %}
+                <div class="content-box">
+                    <div class="header-box">
+                        <h3 class="{{ block.settings.block_heading_size }} uppercase text-color--deep_purple">{{ block.settings.block_heading }}</h>
+                    </div>
+                    <div class="content-boxer">
+                        <span class="text-color--deep_purple">
+                            {{ block.settings.block_text }}
+                        </span>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<script>
+    $(document).ready(function() {
+        $('.lower-box-row').slick({
+            dots: true,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            centerMode: false,
+            fade: true,
+            cssEase: 'linear',
+
+            responsive: [
+                {
+                    breakpoint: 9999,
+                    settings: "unslick"
+                },
+                {
+                    breakpoint: 749,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        centerPadding: 0,
+                        centerMode:true
+                    }
+                }
+            ]
+        });
+    });
+</script>
+
+{% schema %}
+{
+    "name": " CTA Collection",
+    "settings": [
+        {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image Logo"
+        },
+        {
+            "type": "inline_richtext",
+            "id": "heading",
+            "label": "t:sections.newsletter.blocks.heading.settings.heading.label"
+        },
+        {
+            "type": "select",
+            "id": "heading_size",
+            "options": [
+                {
+                    "value": "h3",
+                    "label": "t:sections.all.heading_size.options__1.label"
+                },
+                {
+                    "value": "h2",
+                    "label": "t:sections.all.heading_size.options__2.label"
+                },
+                {
+                    "value": "h1",
+                    "label": "t:sections.all.heading_size.options__3.label"
+                }
+            ],
+            "default": "h1",
+            "label": "t:sections.all.heading_size.label"
+        },
+        {
+            "type": "richtext",  
+            "id": "text",
+            "default": "t:sections.newsletter.blocks.paragraph.settings.paragraph.default",
+            "label": "t:sections.newsletter.blocks.paragraph.settings.paragraph.label"
+        },
+        {
+            "type": "range",
+            "id": "padding_top",
+            "min": 0,
+            "max": 150,
+            "step": 5,
+            "unit": "px",
+            "label": "t:sections.all.padding.padding_top",
+            "default": 60
+        },
+        {
+            "type": "range",
+            "id": "padding_bottom",
+            "min": 0,
+            "max": 150,
+            "step": 5,
+            "unit": "px",
+            "label": "t:sections.all.padding.padding_bottom",
+            "default": 60
+        }
+    ],
+    "blocks": [
+        {
+            "type": "row",
+            "name": "Content Block",
+            "settings": [
+                {
+                    "type": "inline_richtext",
+                    "id": "block_heading",
+                    "label": "t:sections.newsletter.blocks.heading.settings.heading.label"
+                },
+                {
+                    "type": "select",
+                    "id": "block_heading_size",
+                    "options": [
+                        {
+                            "value": "h3",
+                            "label": "t:sections.all.heading_size.options__1.label"
+                        },
+                        {
+                            "value": "h2",
+                            "label": "t:sections.all.heading_size.options__2.label"
+                        },
+                        {
+                            "value": "h1",
+                            "label": "t:sections.all.heading_size.options__3.label"
+                        }
+                    ],
+                    "default": "h1",
+                    "label": "t:sections.all.heading_size.label"
+                },
+                {
+                    "type": "richtext",  
+                    "id": "block_text",
+                    "default": "t:sections.newsletter.blocks.paragraph.settings.paragraph.default",
+                    "label": "t:sections.newsletter.blocks.paragraph.settings.paragraph.label"
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "name": "CTA Rows"
+        }
+    ]
+}
+{% endschema %}

@@ -1,0 +1,417 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "slideshow_m3P8ni": {
+      "type": "slideshow",
+      "blocks": {
+        "slide_NfgdtP": {
+          "type": "slide",
+          "disabled": true,
+          "settings": {
+            "heading": "Image slide",
+            "heading_size": "h1",
+            "subheading": "Tell your brand's story through images",
+            "button_label": "Button label",
+            "link": "",
+            "onhover_switch": false,
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": true,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "scheme-1",
+            "text_alignment_mobile": "center"
+          }
+        },
+        "slide_8DUUEy": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/HeroSection.webp",
+            "heading": "Check out the new line of products gsdsd asdasd fdfdfdf dasdasd sd",
+            "heading_size": "h2",
+            "subheading": "Experience the next level of LEGO® lighting with LMB 2.0. Say goodbye to clunky setups and embrace a seamless, brilliant building experience. Designed by LEGO® fans, for LEGO® fans, LMB 2.0 transforms your creations into stunning displays. Light up your builds like never before with LMB 2.0!",
+            "button_label": "Shop Now",
+            "link": "shopify://collections/all",
+            "onhover_switch": false,
+            "button_style_secondary": false,
+            "box_align": "middle-left",
+            "show_text_box": true,
+            "text_alignment": "left",
+            "image_overlay_opacity": 0,
+            "color_scheme": "scheme-2",
+            "text_alignment_mobile": "center"
+          }
+        },
+        "slide_VXgtAm": {
+          "type": "slide",
+          "disabled": true,
+          "settings": {
+            "heading": "Image slide",
+            "heading_size": "h1",
+            "subheading": "Tell your brand's story through images",
+            "button_label": "Button label",
+            "link": "",
+            "onhover_switch": false,
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": true,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "scheme-1",
+            "text_alignment_mobile": "center"
+          }
+        }
+      },
+      "block_order": [
+        "slide_NfgdtP",
+        "slide_8DUUEy",
+        "slide_VXgtAm"
+      ],
+      "settings": {
+        "layout": "full_bleed",
+        "slide_height": "large",
+        "slider_visual": "dots",
+        "auto_rotate": true,
+        "change_slides_speed": 5,
+        "image_behavior": "none",
+        "show_text_below": false,
+        "accessibility_info": "Slideshow about our brand"
+      }
+    },
+    "featured_collection": {
+      "type": "featured-collection",
+      "disabled": true,
+      "settings": {
+        "title": "Featured products",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "all",
+        "products_to_show": 8,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "scheme-1",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 44,
+        "padding_bottom": 36
+      }
+    },
+    "slick_carousel_GWBp6p": {
+      "type": "slick-carousel",
+      "blocks": {
+        "tab_Tx4AFi": {
+          "type": "tab",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "tab_Tx4AFi"
+      ],
+      "settings": {
+        "title": "NEW RELEASES",
+        "desc": "Latest LEGO® Light Kits",
+        "collection": "new-releases",
+        "useslider": true,
+        "onhover_switch": false,
+        "enable_quick_add": true
+      }
+    },
+    "image_with_text_KDY48p": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_LYe69T": {
+          "type": "heading",
+          "settings": {
+            "heading": "ABOUT US",
+            "heading_size": "h2"
+          }
+        },
+        "text_cYmqDT": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We are a local Australian team of adaptive innovators on the hunt to enhance the LEGO® experience. As enthusiasts ourselves, we’re constantly on the hunt for more. More transformation. More creativity. More delight. We’re giving everyone the opportunity to connect the bricks and discover new ways to display. Don’t just build it. Light My Bricks it. </p>",
+            "text_style": "body"
+          }
+        },
+        "button_YtkGLY": {
+          "type": "button",
+          "settings": {
+            "button_label": "Learn more",
+            "button_link": "shopify://pages/about",
+            "onhover_switch": true,
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_LYe69T",
+        "text_cYmqDT",
+        "button_YtkGLY"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/HeroSection.webp",
+        "image_2": "shopify://shop_images/CoolCar.jpg",
+        "image_3": "shopify://shop_images/DIY-Designer-Kit-Technic-Transporter-Back-Light-My-Bricks.jpg",
+        "height": "medium",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "scheme-cf184c6d-d667-4b4d-b47a-c3f98922056e",
+        "color_scheme": "scheme-7bc18d6c-0144-43fd-a279-247b2902bf40",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 180,
+        "padding_bottom": 180
+      }
+    },
+    "logo_carousel_XX6kjV": {
+      "type": "logo-carousel",
+      "settings": {
+      }
+    },
+    "testimonial_nDpTb8": {
+      "type": "testimonial",
+      "blocks": {
+        "testimonial_7jNnJT": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "5-stars",
+            "testimonial": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.</p>",
+            "author": "Testimonial's name",
+            "author_info": "Los Angeles, CA"
+          }
+        },
+        "testimonial_DaJeRf": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "5-stars",
+            "testimonial": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.</p>",
+            "author": "Testimonial's name",
+            "author_info": "Los Angeles, CA"
+          }
+        },
+        "testimonial_V6pQXU": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "5-stars",
+            "testimonial": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.</p>",
+            "author": "Testimonial's name",
+            "author_info": "Los Angeles, CA"
+          }
+        },
+        "testimonial_dhQqi4": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "5-stars",
+            "testimonial": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.</p>",
+            "author": "Testimonial's name",
+            "author_info": "Los Angeles, CA"
+          }
+        }
+      },
+      "block_order": [
+        "testimonial_7jNnJT",
+        "testimonial_DaJeRf",
+        "testimonial_V6pQXU",
+        "testimonial_dhQqi4"
+      ],
+      "settings": {
+        "title": "Customer Testimonials",
+        "caption_text": "What people are saying about us",
+        "testimonial_color": "#f5f2fa",
+        "testimonial_count": 2,
+        "align_text": "left",
+        "background_color": "#ffffff",
+        "full_width": true,
+        "container_style": true,
+        "padding_top": 144,
+        "padding_bottom": 144
+      }
+    },
+    "slick_carousel_Rfphz7": {
+      "type": "slick-carousel",
+      "blocks": {
+        "tab_Ye6J8t": {
+          "type": "tab",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "tab_Ye6J8t"
+      ],
+      "disabled": true,
+      "custom_css": [
+        ".tabs-section .slick-dots {bottom: -65px; text-align: left; width: initial;}"
+      ],
+      "settings": {
+        "title": "NEW RELEASES",
+        "desc": "Latest LEGO® Light Kits",
+        "collection": "frontpage",
+        "useslider": true,
+        "onhover_switch": false,
+        "enable_quick_add": true
+      }
+    },
+    "slick_carousel_4D4p4y": {
+      "type": "slick-carousel",
+      "blocks": {
+        "tab_h64MiF": {
+          "type": "tab",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "tab_h64MiF"
+      ],
+      "settings": {
+        "title": "NEW RELEASES",
+        "desc": "Latest LEGO® Light Kits",
+        "collection": "all",
+        "useslider": true,
+        "onhover_switch": false,
+        "enable_quick_add": true
+      }
+    },
+    "home_cpa_g8yCUt": {
+      "type": "home-cpa",
+      "blocks": {
+        "heading_yhkTgE": {
+          "type": "heading",
+          "settings": {
+            "block_heading": "Join The Light My Bricks Club",
+            "block_heading_size": "h2"
+          }
+        },
+        "paragraph_Lnfa3c": {
+          "type": "paragraph",
+          "settings": {
+            "block_text": "<p>Join our Light My Bricks club to get updates on new releases, promotions and more. </p>"
+          }
+        },
+        "email_form_fdhpqD": {
+          "type": "email_form",
+          "settings": {
+            "email_text": "<p>By clicking Sign Up you're confirming that you agree with our <a href=\"#\" title=\"#\">Terms and Conditions</a>.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_yhkTgE",
+        "paragraph_Lnfa3c",
+        "email_form_fdhpqD"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/lmb-logo-large.webp",
+        "padding_top": 110,
+        "padding_bottom": 110,
+        "onhover_switch": true
+      }
+    },
+    "newsletter_yGpKYr": {
+      "type": "newsletter",
+      "blocks": {
+        "heading_j7MiKG": {
+          "type": "heading",
+          "settings": {
+            "heading": "Subscribe to our emails",
+            "heading_size": "h1"
+          }
+        },
+        "paragraph_zDCE7T": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>Be the first to know about new collections and exclusive offers.</p>"
+          }
+        },
+        "email_form_PDYV33": {
+          "type": "email_form",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "heading_j7MiKG",
+        "paragraph_zDCE7T",
+        "email_form_PDYV33"
+      ],
+      "disabled": true,
+      "settings": {
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "featured_blog_XJT3Ub": {
+      "type": "featured-blog",
+      "disabled": true,
+      "settings": {
+        "heading": "STAY IN THE KNOW",
+        "heading_size": "h2",
+        "description": "Check out our awesome blogs stay up to date with all things Light My Bricks™.",
+        "blog": "news",
+        "post_limit": 4,
+        "columns_desktop": 4,
+        "color_scheme": "scheme-1",
+        "show_image": true,
+        "show_date": false,
+        "show_author": false,
+        "onhover_switch": false,
+        "show_view_all": true,
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    },
+    "featured_blog_slick_MK9QW4": {
+      "type": "featured-blog-slick",
+      "settings": {
+        "heading": "STAY IN THE KNOW",
+        "heading_size": "h2",
+        "description": "Check out our awesome blogs stay up to date with all things Light My Bricks™",
+        "blog": "news",
+        "onhover_switch": false,
+        "show_view_all": true,
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    }
+  },
+  "order": [
+    "slideshow_m3P8ni",
+    "featured_collection",
+    "slick_carousel_GWBp6p",
+    "image_with_text_KDY48p",
+    "logo_carousel_XX6kjV",
+    "testimonial_nDpTb8",
+    "slick_carousel_Rfphz7",
+    "slick_carousel_4D4p4y",
+    "home_cpa_g8yCUt",
+    "newsletter_yGpKYr",
+    "featured_blog_XJT3Ub",
+    "featured_blog_slick_MK9QW4"
+  ]
+}

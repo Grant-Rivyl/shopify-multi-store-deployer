@@ -1,0 +1,101 @@
+.product-image-with-text{
+    background-color: $purple_light;
+    overflow: hidden;
+    position:relative;
+    padding: initial!important;
+    .purple-background{
+        height: 100%;
+        width: 50%;
+        display: block;
+        position: absolute;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: left;
+        top: 0;
+        bottom: 0;
+    }
+    
+    .image-with-text__text{
+        @include colorWhite;
+    } 
+    .image-with-text__text{
+        @include regularFont;
+    }
+    .image-with-text__grid {
+        .image-with-text__media-item{
+            z-index: 1!important;
+            @media screen and (min-width: 750px) {
+                &.grid__item {
+                    margin-left: -20%;
+                    width: calc(60% - var(--grid-desktop-horizontal-spacing) / 2);
+                } 
+            }
+            @media screen and (max-width: 989px) and (min-width: 750px) {
+                &.grid__item {
+                    margin-left: -20%;
+                    width: calc(50% - var(--grid-desktop-horizontal-spacing) / 2);
+                } 
+            }
+           
+            .image-with-text__media {
+                border:initial;
+            }
+            
+        }  
+        .image-with-text__content {
+            
+            .image-with-text__text ,.image-with-text__heading {
+                // max-width:340px;
+                width:100%;
+                
+                @media screen and (min-width: 750px) {
+                padding-right: 30%;
+                }
+            } 
+            .image-with-text__heading{
+                @media screen and (max-width: 1350px) and  (min-width: 990px) {
+                    font-size:35px;
+                }
+                @media screen and (max-width: 989px) and  (min-width: 750px) {
+                    font-size:30px;
+                }
+            }
+        }
+        
+    }
+    .image-with-text{
+        .image-with-text__grid{
+            .image-with-text__text-item{
+                .image-with-text__content{
+                    @media screen and (max-width: 749px) {
+                        padding-left: 20px;
+                        padding-right: 20px;
+                    
+                    }
+                }
+                @media screen and (min-width: 750px) {
+                    &.grid__item {
+                        width: calc(40% - var(--grid-desktop-horizontal-spacing) / 2);
+                    }
+                    .image-with-text__content{
+                        background-color: $deep_purple;
+                        border: initial;
+                        clip-path: url(#clip-callout);
+                    
+                }
+                @media screen and (max-width: 989px) and (min-width: 750px) {
+                    &.grid__item {
+                        width: calc(50% - var(--grid-desktop-horizontal-spacing) / 2);
+                    } 
+                }
+                }
+                .image-with-text__content{
+                    background-color: $deep_purple;
+                }
+                
+               
+            }
+        }
+    }
+    
+}

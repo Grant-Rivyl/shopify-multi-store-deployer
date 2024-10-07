@@ -1,0 +1,37 @@
+.utilities-text-section {
+    .page-width--narrow {
+        margin:0 auto;
+        h1 {
+            text-align: center;
+            margin:0 0 24px;
+            @include colorDeeppurple;
+            @media screen and (max-width:749px){
+              
+            }
+        }
+        .date {
+            text-align: center;
+            margin:0 0 50px;
+            @include colorDeeppurple;
+            @media screen and (max-width:749px){
+                
+                margin:0 0 30px;
+            }
+        }
+        .utilities-text {
+            @include colorDeeppurple;
+            p,h2,h3,h4,h5,h6 {
+                @include colorDeeppurple;
+            }
+            h2,h3,h4,h5,h6 {
+                margin:0 0 16px;
+            }
+        }
+        p,h2,h3,h4,h5,h6 {
+            @include colorDeeppurple;
+        }
+        h2,h3,h4,h5,h6 {
+            margin:0 0 16px;
+        }
+    }
+}

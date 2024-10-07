@@ -1,0 +1,203 @@
+{{ 'video-section.css' | asset_url | stylesheet_tag }}
+{{ 'component-deferred-media.css' | asset_url | stylesheet_tag }}
+{% style %}
+    .section-{{ section.id }}-padding {
+        padding-top: {{ section.settings.padding_top | times: 0.50 | round: 0 }}px;
+    }
+
+    @media screen and (min-width: 750px) {
+        .section-{{ section.id }}-padding {
+            padding-top: {{ section.settings.padding_top }}px;
+        }
+    }
+{% endstyle %}
+
+<section class="cta-video__section section-{{ section.id }}-padding">
+    <div class="page-width">
+        <div class="upper-box">
+            <div class="left-box">
+                <h3 class="{{ section.settings.heading_size }} text-color--white">{{ section.settings.heading }}</h3>
+                <span class="text-color--white">
+                    {{ section.settings.text }}
+                </span>
+            </div>
+            <div class="right-box">
+                <img src="{{ section.settings.image | image_url }}" alt="">
+            </div>
+        </div>
+        <div class="lower-box">
+            {% for block in section.blocks %}
+                {%- liquid
+                    assign video_id = block.settings.video.id | default: block.settings.video_url.id
+                    assign alt = 'sections.video.load_video' | t: description: video_alt | escape
+                    assign poster = block.settings.video.preview_image | default: block.settings.cover_image
+
+                    if block.settings.video != null
+                        assign ratio_diff = block.settings.video.aspect_ratio | minus: poster.aspect_ratio | abs
+                        if ratio_diff < 0.01 and ratio_diff > 0
+                        assign fix_ratio = true
+                        endif
+                    endif
+                -%}
+                <deferred-media
+                    class="video-section__media deferred-media gradient global-media-settings{% if fix_ratio %} media-fit-cover{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                    data-media-id="{{ video_id }}"
+                    {% if poster != null %}
+                        style="--ratio-percent: 50%;"
+                    {% endif %}
+                >
+                    <button
+                        id="Deferred-Poster-Modal-{{ video_id }}"
+                        class="video-section__poster media deferred-media__poster media--landscape"
+                        type="button"
+                        aria-label="{{ alt }}"
+                    >
+                        {%- if poster != null -%}
+                            {{
+                                poster
+                                | image_url: width: 3840
+                                | image_tag: sizes: sizes, widths: '375, 750, 1100, 1500, 1780, 2000, 3000, 3840', alt: alt
+                            }}
+                        {%- else -%}
+                            {{ 'hero-apparel-3' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
+                        {%- endif -%}
+                        <span class="deferred-media__poster-button motion-reduce">
+                            {%- render 'icon-play' -%}
+                        </span>
+                    </button>
+                    <template>
+                        {%- if block.settings.video == null and block.settings.video_url != null -%}
+                        {%- liquid
+                            assign loop = ''
+                            if block.settings.enable_video_looping
+                            assign loop = '&loop=1&playlist=' | append: video_id
+                            endif
+                        -%}
+                        {%- if block.settings.video_url.type == 'youtube' -%}
+                            <iframe
+                                src="https://www.youtube.com/embed/{{ video_id }}?enablejsapi=1&autoplay=1{{ loop }}"
+                                class="js-youtube"
+                                allow="autoplay; encrypted-media"
+                                allowfullscreen
+                            ></iframe>
+                        {%- else -%}
+                            <iframe
+                                src="https://player.vimeo.com/video/{{ video_id }}?autoplay=1{{ loop }}"
+                                class="js-vimeo"
+                                allow="autoplay; encrypted-media"
+                                allowfullscreen
+                            ></iframe>
+                        {%- endif -%}
+                        {%- else -%}
+                        {{
+                            block.settings.video
+                            | video_tag:
+                            image_size: '1100x',
+                            autoplay: true,
+                            loop: block.settings.enable_video_looping,
+                            controls: true,
+                            muted: false
+                        }}
+                        {%- endif -%}
+                    </template>
+                </deferred-media>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+{% schema %}
+{
+    "name": "CTA Video",
+    "settings": [
+        {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image Logo"
+        },
+        {
+            "type": "inline_richtext",
+            "id": "heading",
+            "label": "t:sections.newsletter.blocks.heading.settings.heading.label"
+        },
+        {
+            "type": "select",
+            "id": "heading_size",
+            "options": [
+                {
+                    "value": "h3",
+                    "label": "t:sections.all.heading_size.options__1.label"
+                },
+                {
+                    "value": "h2",
+                    "label": "t:sections.all.heading_size.options__2.label"
+                },
+                {
+                    "value": "h1",
+                    "label": "t:sections.all.heading_size.options__3.label"
+                }
+            ],
+            "default": "h1",
+            "label": "t:sections.all.heading_size.label"
+        },
+        {
+            "type": "richtext",  
+            "id": "text",
+            "default": "t:sections.newsletter.blocks.paragraph.settings.paragraph.default",
+            "label": "t:sections.newsletter.blocks.paragraph.settings.paragraph.label"
+        },
+        {
+            "type": "range",
+            "id": "padding_top",
+            "min": 0,
+            "max": 100,
+            "step": 5,
+            "unit": "px",
+            "label": "t:sections.all.padding.padding_top",
+            "default": 60
+        }
+    ],
+    "blocks": [
+        {
+            "type": "column",
+            "name": "Video",
+            "limit": 1,
+            "settings": [
+                {
+                    "type": "header",
+                    "content": "t:sections.video.settings.header__1.content"
+                },
+                {
+                    "type": "video",
+                    "id": "video",
+                    "label": "t:sections.video.settings.video.label"
+                },
+                {
+                    "type": "video_url",
+                    "id": "video_url",
+                    "accept": ["youtube", "vimeo"],
+                    "default": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+                    "label": "t:sections.video.settings.video_url.label",
+                    "info": "t:sections.video.settings.video_url.info"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "cover_image",
+                    "label": "t:sections.video.settings.cover_image.label"
+                },
+                {
+                    "type": "checkbox",
+                    "id": "enable_video_looping",
+                    "label": "t:sections.video.settings.enable_video_looping.label",
+                    "default": false
+                }  
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "name": "CTA Video"
+        }
+    ]
+}
+{% endschema %}

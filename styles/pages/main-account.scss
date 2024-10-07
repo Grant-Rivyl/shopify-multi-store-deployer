@@ -1,0 +1,93 @@
+.customer-wrapper {
+    .line-wrapper {
+        position:absolute;
+        right:0;
+        top:200px;
+        display:flex;
+        flex-direction: column;
+        row-gap:8px;
+        align-items: end;
+        @media screen and (max-width:990px) {
+            display:none;
+        }
+        .img-top {
+            width:240px;
+        }
+        .img-mid {
+            width:270px;
+        }
+        .img-btm {
+            width:300px;
+        }
+    }
+    .customer-account {
+        position: relative;
+    
+        .header-box {
+            .customer__title {
+                margin:0 0 64px;
+            }
+        }
+        .account-content-inner {
+            --grid-desktop-horizontal-spacing: 48px;
+            --grid-desktop-vertical-spacing: 48px;
+            column-gap: var(--grid-desktop-horizontal-spacing);
+            row-gap: var(--grid-desktop-vertical-spacing);
+            margin-bottom: 64px;
+            @media screen and (max-width:749px) {
+                --grid-desktop-horizontal-spacing: 20px;
+                --grid-desktop-vertical-spacing: 20px;
+                column-gap: var(--grid-desktop-horizontal-spacing);
+                row-gap: var(--grid-desktop-vertical-spacing);
+            }
+            .account-content-wrapper {
+                padding:48px;
+                background: $purple_light;
+                position:relative;
+                border-radius: 20px;
+                @media screen and (max-width:990px) {
+                    padding:24px;
+                }
+                h5 {
+                    margin:0 0 12px;
+                    @include colorDeeppurple;
+                }
+                p{
+                    margin:0;
+                    @include colorDeeppurple;
+                    @include fontSize(medium);
+                }
+                a {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    width:100%;
+                    height:100%;
+                    z-index: 1;
+                }
+            }
+        }
+        .account-btn-wrapper {
+            display:flex;
+            column-gap: 24px;
+            row-gap:16px;
+            @media screen and (max-width:749px) {
+                flex-direction: column;
+                
+            }
+           a {
+            display:inline-flex;
+            text-decoration: none;
+            font-weight: 400;
+            line-height: 150%;
+           }
+            
+        }
+        .order-history-wrapper {
+            
+        }
+    }
+}

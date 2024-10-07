@@ -1,0 +1,78 @@
+.main-blog {
+    .blog-articles {
+        display:grid;
+        gap:32px;
+        grid-template-columns: repeat(2, 1fr); /* First row with 2 columns */
+        grid-template-rows: auto; /* Adjusts based on content */
+        margin-bottom: 32px;
+        @media screen and (max-width:749px) {
+            grid-template-columns: repeat(1, 1fr)
+        }
+        &:nth-child( n + 3 ) {
+            grid-column: span 1;
+            grid-template-columns: repeat(3, 1fr);
+        }
+        
+        .blog-articles__article {
+            overflow: hidden;
+           
+            .article-card-wrapper {
+                .article-card { 
+                    transition: bottom .3s linear;
+                    &:hover {
+                        .card__content {
+                            .card__information { 
+                             
+                                bottom:0%;
+                                transition: all .4s ease-in-out;
+                            }
+                        }
+                    }
+                    .card__inner  {
+                      
+                    }
+                    .card-heading-wrapper {
+                        .card__heading {
+                            border-radius: 0px 0px 20px 20px;
+                            background: var(--bg-purple-light, #F5F2FA);
+                            padding:20px; 
+                        }
+                    }
+                    .card__content {
+                        overflow: hidden;                    
+        
+                     
+                        .card__information { 
+                            text-align: left;
+                            position: absolute;
+                            bottom: -100%;
+
+                            transition: all .4s ease-in-out;
+                            
+                            .card__information
+                            .card__heading {
+                                @include largeFont;
+                                @include colorDeeppurple;
+                                font-weight: 500;
+                                line-height: 140%;
+                                margin-bottom: 8px;
+                            }
+                            .article-card__excerpt {
+                                margin: 0 0 35px;
+                            }
+                            .read-more-btn {
+                                font-weight: 400;
+                                line-height: 150%;
+                                text-decoration-line: underline;
+                                @include colorDeeppurple;
+                            }
+                            .read-more-btn{
+                                @include fontSize(medium);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

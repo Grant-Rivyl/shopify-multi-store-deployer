@@ -1,0 +1,112 @@
+section.home-cpa__section {
+    background-color: $deep_purple;
+    .page-width {
+        position: relative;
+        overflow: hidden;
+        .home-cpa__img {
+            position: absolute;
+            right: 0;
+            top: 0;
+            z-index: 0;
+            max-width: 100%; 
+            @media screen and (max-width:959px){
+                right: -10%;
+            }
+            @media screen and (max-width:869px){
+                right: -20%;
+            }
+            @media screen and (max-width:809px) and (min-width: 750px){
+                right: -28%;
+            }
+        }
+        .home-cpa__wrapper {
+            position: relative;
+            z-index: 1;
+            .header-box {
+                margin-bottom: 20px;
+                @media screen and (max-width: 1254px) and (min-width: 750px) {
+                    width: 45ch;
+                }
+                h1 {
+                    margin: initial;
+                }
+            }
+            .sub-header-box {
+                margin-bottom: 30px;
+                span {
+                    p {
+                        margin: initial;
+                     
+                        @media screen and (max-width: 1254px) and (min-width: 750px) {
+                            width: 60ch;
+                        }
+                        @media screen and (max-width: 1254px) and (min-width: 750px) {
+                            width: 37ch;
+                        }
+                        
+                    }
+                    p{
+                        @include fontSize(medium);
+                    }
+                }
+            }
+            .email-box {
+                .email-form {
+                    margin-bottom: 15px;
+                    form {
+                        display: flex;
+                        column-gap: 15px;
+                        .email-form-field {
+                            font-size:16px;
+                            padding: 12px;
+                            border-radius: 10px;
+                            width: 30%;
+                            border: initial;
+                            &:focus-visible {
+                                outline: initial;
+                                outline-offset: initial;
+                                box-shadow: initial;
+                                border: initial;
+                            }
+                        }
+                    }
+                }
+                span {
+                    p {
+                        margin: initial;
+                        @include xsmallFont;
+                        a {
+                            color: $white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media screen and ( max-width: 749px ) {
+        .page-width {
+            .home-cpa__img {
+                display: none;
+            }
+            .home-cpa__wrapper {
+                .header-box {
+                    margin-bottom: 15px;
+                }
+                .sub-header-box {
+                    margin-bottom: 20px;
+                }
+                .email-box {
+                    .email-form {
+                        form {
+                            flex-direction: column;
+                            row-gap: 15px;
+                            .email-form-field {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

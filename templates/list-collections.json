@@ -1,0 +1,139 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "image_banner_v2_pHhxCH": {
+      "type": "image-banner-v2",
+      "blocks": {
+        "heading_qgCJVb": {
+          "type": "heading",
+          "settings": {
+            "heading": "Medium length hero headline goes here",
+            "heading_size": "h1"
+          }
+        },
+        "text_ticUpi": {
+          "type": "text",
+          "settings": {
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            "text_style": "subtitle"
+          }
+        },
+        "text_QNhGhi": {
+          "type": "text",
+          "settings": {
+            "text": "Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_qgCJVb",
+        "text_ticUpi",
+        "text_QNhGhi"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/HeroBanner.webp",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "desktop_content_position": "middle-left",
+        "show_text_box": true,
+        "desktop_content_alignment": "left",
+        "color_scheme": "scheme-7465d7f7-f891-45f3-a00b-f8277b11cf76",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    "main": {
+      "type": "main-list-collections",
+      "settings": {
+        "title": "Collections",
+        "sort": "alphabetical",
+        "image_ratio": "square",
+        "columns_desktop": 3,
+        "columns_mobile": "2",
+        "onhover_switch": false
+      }
+    },
+    "image_with_text_v2_m6tGXk": {
+      "type": "image-with-text-v2",
+      "custom_css": [
+
+      ],
+      "settings": {
+        "image": "shopify://shop_images/RobotToy.webp",
+        "heading": "elevating your collection",
+        "heading_size": "h3",
+        "sub_text": "<p>Light My Bricks™ elevates LEGO® products, turning the ordinary into the extraordinary. We exist to showcase imaginative, innovative, and unique ways that your LEGO® journey can truly come to life, be shown off and enjoyed. </p>",
+        "mobile_view": "column",
+        "padding_top": 95,
+        "padding_bottom": 95
+      }
+    },
+    "testimonial_ygX3dE": {
+      "type": "testimonial",
+      "blocks": {
+        "testimonial_KkN6ik": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "5-stars",
+            "testimonial": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.</p>",
+            "author": "Testimonial's name",
+            "author_info": "Los Angeles, CA"
+          }
+        },
+        "testimonial_PDQHbR": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "5-stars",
+            "testimonial": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.</p>",
+            "author": "Testimonial's name",
+            "author_info": "Los Angeles, CA"
+          }
+        },
+        "testimonial_MfLL7G": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "5-stars",
+            "testimonial": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.</p>",
+            "author": "Testimonial's name",
+            "author_info": "Los Angeles, CA"
+          }
+        }
+      },
+      "block_order": [
+        "testimonial_KkN6ik",
+        "testimonial_PDQHbR",
+        "testimonial_MfLL7G"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "Customer testimonials",
+        "caption_text": "What people are saying about us",
+        "testimonial_color": "",
+        "testimonial_count": 2,
+        "align_text": "left",
+        "background_color": "#595959",
+        "full_width": true,
+        "container_style": true,
+        "padding_top": 112,
+        "padding_bottom": 112
+      }
+    }
+  },
+  "order": [
+    "image_banner_v2_pHhxCH",
+    "main",
+    "image_with_text_v2_m6tGXk",
+    "testimonial_ygX3dE"
+  ]
+}

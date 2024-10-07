@@ -1,0 +1,54 @@
+name: Pushing to all live branches 
+
+on:
+  push:
+    branches:
+      - LiveSite
+    paths-ignore:
+      - 'templates/**'
+      - 'config/**'
+  pull_request:
+    branches:
+      - LiveSite
+    paths-ignore:
+      - 'templates/**'
+      - 'config/**'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Check out the code from the repository
+      - uses: actions/checkout@v4
+
+      - name: Push to all live branches
+        run: |
+          # Define the branches to push to
+          branches=("Canada" "UK" "Europe" "Australia" "US")
+
+          # Ensure we're on the LiveSite branch
+          git checkout LiveSite
+          git pull
+
+          # Unstage changes in templates and config to avoid pushing them
+          git restore --staged templates/** config/**
+
+          # Loop through the branches and push changes
+          for branch in "${branches[@]}"; do
+            git checkout -b "Live/$branch" || git checkout "Live/$branch"
+            
+            # Merge LiveSite into the current branch
+            git merge --no-ff LiveSite
+            
+            # Unstage templates and config folders if they were included
+            git restore --staged templates/** config/**
+
+            # Commit changes without affecting templates and config
+            if ! git diff-index --quiet HEAD --; then
+              git commit --no-edit
+            fi
+
+            # Push the changes to the branch
+            git push -f --set-upstream origin "Live/$branch"
+          done

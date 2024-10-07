@@ -1,0 +1,79 @@
+.banner-v2 {
+    background: $deep_purple;
+    .banner-v2--wrapper {
+        img {
+            width: 100%;
+            max-height: 565px;
+            object-fit: cover;
+
+            @media screen and (max-width:767px) {
+                height:375px;
+            }
+        }
+    }
+    .page-width {
+        .bottom-content--wrapper {
+            display:flex;
+            column-gap: 60px;
+            @media screen and (max-width:989px) {
+                flex-direction: column-reverse;
+                align-items: center;
+            }
+            .left-content {
+                width:47%;
+                
+                @media screen and (max-width:989px) {
+                    width:100%;
+                    display: flex;
+                    justify-content: center;
+                    img{
+                        width: 100%;
+                        max-width: none;
+                    }
+                }
+                @media screen and (max-width:767px) {
+                    width:100%;
+                    display:none;
+                }
+                img {
+                    width:100%;
+                    height:auto;
+                 max-height: 530px;
+                 @media screen and (max-width:989px) {
+                    max-height: none;
+                 }
+                }
+            }
+            .right-content {
+                width:47%;
+                display:flex;
+                justify-content: center;
+                flex-direction: column;
+                @media screen and (max-width:989px) {
+                    width:100%;
+                    word-break: break-word;
+                }
+                @media screen and (max-width:767px) {
+                    width:100%;
+                }
+                .title {
+                    @include colorBurntorange;
+                    text-transform: uppercase;
+                    margin:0 0 20px;
+                }
+                .description {
+                    margin:0;
+                    p {
+                        line-height: 145%;
+                        @include colorWhite;
+                        
+                    }
+                    p{
+                        @include fontSize(medium);
+                    }
+                }
+            
+            }
+        }
+    }
+}

@@ -1,0 +1,113 @@
+{% assign metadata = product.metafields.custom.product_columns.value %}
+{% assign metafields = product.metafields.custom %}
+{% comment %} {{ metadata.count }} {% endcomment %}
+{% assign meta_count = metadata.count %}
+
+{% comment %} {{meta_count}} {% endcomment %}
+
+{% if meta_count == 2 %}
+   {% assign column_count = 2 %} 
+  
+{%  elsif meta_count == 4%}  
+    {% assign column_count = 4 %}  
+{%  elsif meta_count >= 3 or meta_count <= 5 or meta_count%}  
+    {% assign column_count = 3 %}
+{% else %}
+    {% assign column_count = 3 %}      
+{% endif %}
+{% if meta_count == 2 %}
+{% assign column_count_mobile = 2 %}  
+{% else %}
+    {% assign column_count_mobile = 2 %}      
+{% endif %}
+{% if meta_count != 0 and metadata != null%}
+{% comment %} xx{{ column_count }}xx {% endcomment %}
+<section class="product-columns">
+    <div class="page-width">
+        <div class="grid grid--1-col grid--{{column_count_mobile}}-col-tablet grid--{{column_count}}-col-desktop  ">
+                
+            {% for product_column in metadata %} 
+                <div class="grid__item">
+                <div class="product-column">
+                    <div class="product-column__image ">
+                        {% if forloop.index == 1 %}
+                            <img src="{{ metafields.individual_features_image_1 | metafield_text}}" alt="">
+                        {%  elsif forloop.index == 2 %} 
+                            <img src="{{ metafields.individual_features_image_2 | metafield_text}}" alt="">
+                        
+                        {%  elsif forloop.index == 3 %}  
+                            <img src="{{ metafields.individual_features_image_3 | metafield_text}}" alt="">
+                        {% else %}
+                            <img src="{{ metafields.individual_features_image_4 | metafield_text}}" alt="">   
+                        {% endif %}
+                    </div>
+                    <div class="product-column__content-wrap">
+                        <div class="product-column__title-wrapper">
+                        {% if product_column.product_column_icons != empty %}
+
+                        <img class="svg-logo" src="{{ product_column.product_column_icons | metafield_text }}" alt="">
+
+                        {% endif %}
+                        {% comment %} {% for column_icon in product_column.product_column_icon.values %}
+                            <img src="{{ icons.product_columns_references_icons  }}" alt="">
+                            {% for column_icon_references in column_icon.product_columns_references_icons.value %}
+                                <img src="{{ column_icon_references.icon  }}" alt="">
+                            {% endfor %}
+                        
+                        {% endfor %}
+                        <br>x
+                        {% for column_icon_references in product_column.product_column_icon.value %}
+                            <img src="{{ column_icon_references.icon  }}" alt="">
+                            {% assign references_icon = column_icon_references.product_columns_references_icons.value %}
+                            {% for file in references_icon %}
+                                {{ file.icon }}
+                                {{ file.icon }}
+                            {% endfor %}
+                        {% endfor %}
+
+                        {{ product_column.product_column_icon   }}
+                        {% for product_columns_iconss in product_column.product_column_icon %}
+                            {% for product_columns_iconsss in product_columns_iconss.product_columns_references_icons %}
+                            
+                                {{ product_columns_iconsss.icon }}
+                            {% endfor %}  
+                            {{ product_columns_iconss.product_column_icon }}
+                            {{ product_columns_iconss.icon }}
+                        {% endfor %}   
+                        {% for references in shop.metaobjects.product_columns_references_icons.values %}
+                            {{ references.icon }}xx
+                        {% endfor %} {% endcomment %}
+                        <h5 class="product-column__title no-margin">{{ product_column.product_column_title }}</h5>
+                        
+                    </div>
+                    <div class="product-column__desc-wrapper">
+                        <p class="product-column__desc font-text--regular">{{ product_column.product_column_description }}</p>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}     
+
+            
+        </div>
+    </div>
+</section>
+{% endif %}
+{% schema %}
+    {
+      "name": "Product Columns",
+      "tag": "section",
+      "class": "section",
+      "disabled_on": {
+        "groups": ["header", "footer"]
+      },
+      "settings": [
+       
+      ],
+      "presets": [
+        {
+          "name": "Product Columns"
+        }
+      ]
+    }
+    {% endschema %}

@@ -1,0 +1,249 @@
+.button-footer-cta {
+    display: flex;
+    padding: 12px 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    color: $deep_purple;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%; /* 27px */
+    border-radius: 10px;
+    border: 1px solid $yellow;
+    background: $yellow;
+}
+.button-footer-cta{
+    @include fontSize(medium);
+}
+
+.btn.product__form--add-to-cart{
+    font-weight: 600;
+    color:$light_purple!important;
+    background-color:transparent!important;
+    border: 1px solid $light_purple!important;
+    svg{
+        color:$light_purple!important;
+    }
+}
+.shopify-payment-button{
+    button{
+        &.shopify-payment-button__button{
+            @include fontSize(medium);
+        }
+        &.shopify-payment-button__button{
+            @include fontIntern;
+            font-weight: 600;
+            color:$deep_purple;
+            background-color:transparent;
+            border-radius:12px;
+            border: 1px solid $deep_purple;
+            line-height: 0;
+                &:after{
+                    content:initial;
+                }
+                &:hover{
+                    color:$deep_purple;
+                background-color:$purple_light;
+                }
+        }
+    }
+}
+.quick-add{
+    .button{
+        .button--primary{
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        }
+    }
+    
+}
+.button{
+    @include fontSize(medium);
+}
+.button{
+    letter-spacing: normal;
+    border-radius:10px;
+    border:initial;
+    @include fontIntern;
+    transition: all .2s ease-in-out;
+    &.button--secondary{
+        background-color:transparent;
+        border: 1px solid $white;
+         color:$white;
+        &:hover{
+            background-color:$white;
+            color:$black;
+        }
+        &.reverse-color{
+            background-color:$white;
+            border: 1px solid $white;
+            color:$deep_purple;
+            transition: all 0.2s ease-in-out;
+            font-weight: 700;
+            column-gap: 12px;
+                &:hover{
+                background-color:transparent;
+                border: 1px solid $white;
+                color:$deep_purple;
+            }
+        }
+    }
+    &:before,&:after{
+        content:initial;
+    }
+    &.button--primary{
+        color:$deep_purple;
+        background-color:$yellow;
+        font-weight: 600;
+        position:relative;
+        top:0px;  
+        column-gap: 12px;
+        transition: all .2s ease-in;
+        
+          
+          svg{
+            position:relative;
+            right:0px;
+            transition: all .2s ease-in;
+          }
+          &:hover{
+            svg{
+                
+                right:-10px;
+                
+            }
+          }
+          
+        &:hover{
+            box-shadow: rgba(253, 207, 0, 0.2) 0px 4px 12px;
+            box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+            box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+            color:$deep_purple;
+        }
+        &.onhover_light{
+            &:hover{
+                box-shadow: rgba(253, 207, 0, 0.2) 0px 4px 12px;
+                box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+                box-shadow: #ffffff66 0 2px 4px, #ffffff4d 0 7px 13px -3px, #ffffff33 0 -3px inset;
+                color:$deep_purple;
+            }
+        }
+    }
+    &.button--primary-support{
+        color:$deep_purple;
+        background-color:$yellow;
+        transition: all .2s ease-in-out;
+        font-weight: 600;
+          
+          column-gap: 12px;
+          svg{
+            position:relative;
+            left:0px;
+            transition: all .2s ease-in;
+          }
+          &:hover{
+            svg{
+                
+                
+                path{
+                    fill:$white;
+                }
+                
+            }
+          }
+          
+        &:hover{
+            color:$white; 
+            background-color:$burnt_orange;
+        }
+    }
+    &.button--tertiary {
+        color: $white;
+        background-color:$deep_purple;
+        transition: all .2s ease-in-out;
+        font-weight: 700;
+        column-gap:12px;
+        svg{
+            position:relative;
+            left:0px;
+            transition: all .2s ease-in;
+          }
+          &:hover{
+            svg{
+                 
+                
+                path{
+                    fill:$black;
+                }
+                
+            }
+          }
+        &:hover {
+            color:$deep_purple;
+            background-color:$yellow;
+        }
+    }
+    &.button--white {
+        color:$deep_purple;
+        background-color:$white;
+        transition: all .2s ease-in-out;
+        font-weight: 600;
+          
+          column-gap: 12px;
+          svg{
+            position:relative;
+            right:0px;
+            transition: all .2s ease-in;
+          }
+          &:hover{
+            svg{
+                
+                right:-10px;
+                path{
+                    fill:$white;
+                }
+                
+            }
+          }
+          
+        &:hover{
+            color:$white; 
+            background-color:$deep_purple;
+        }
+    }
+}
+
+.button--wrapper{
+    display:flex;
+    column-gap:16px;
+}
+
+button.slick-arrow{
+    img{
+        position: absolute;
+        /* display: none; */
+        top: 0;
+        left: 0;
+        transition: all .4s ease-in-out;
+        &.empty-image{
+            transition: all .4s ease-in-out;
+            opacity: 1;
+        }
+        &.fill-image{
+            transition: all .4s ease-in-out;
+            opacity: 0;
+        }
+        
+    }
+    &:hover{
+        img{
+            
+            &.empty-image{
+                opacity: 0;
+            }
+            &.fill-image{
+                opacity: 1;
+            }
+            
+        }
+    }
+}

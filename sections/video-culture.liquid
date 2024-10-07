@@ -1,0 +1,106 @@
+{%- style -%}
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+      padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+    }
+  
+    @media screen and (min-width: 750px) {
+      .section-{{ section.id }}-padding {
+        padding-top: {{ section.settings.padding_top }}px;
+        padding-bottom: {{ section.settings.padding_bottom }}px;
+      }
+    }
+  
+  {% endstyle %}
+{% comment %} xx{{ column_count }}xx {% endcomment %}
+<section class="video-culture-section section-{{ section.id }}-padding">
+    <div class="img-btm-left">
+        <img src="https://cdn.shopify.com/s/files/1/0598/1231/5223/files/222.png?v=1724412553" alt="">
+    </div>
+    <div class="img-btm-left-mobile">
+        <img src="https://cdn.shopify.com/s/files/1/0598/1231/5223/files/333.png?v=1724412831" alt="">
+    </div>
+    <div class="page-width">
+        <div class="video-culture-wrapper">
+            <div class="video-wrapper">
+                <video controls  muted controls loop>
+                    <source src={{ section.settings.video |  video_tag }} 
+                </video>
+            </div>
+            <div class="culture-wrapper">
+                <h3 class="title"> {{ section.settings.title }} </h3>
+                <div class="description">{{ section.settings.description }}</div>
+                <a href="{{ section.settings.url }}" class="button button--primary">
+                    {{ section.settings.btn-label }}
+                    <svg xmlns="http://www.w3.org/2000/svg" width="31" height="15" viewBox="0 0 31 15" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M23.851 0.533691L30.8158 7.50009L23.851 14.4665L22.7182 13.3337L27.7534 8.30009H0.18457V6.70009H27.7534L22.7182 1.66649L23.851 0.533691Z" fill="#1A0E31"/>
+                    </svg>
+              </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{% schema %}
+    {
+      "name": "Video Culture",
+      "settings": [     
+        {
+            "type": "video",
+            "id": "video",
+            "label": "Video"
+        }, 
+        {
+            "type": "text",
+            "id": "title",
+            "label": "Heading Title",
+            "default": "Team Culture"
+        },
+        {
+            "type": "inline_richtext",
+            "id": "description",
+            "label": "Description",
+            "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. "
+        },
+        {
+            "type": "text",
+            "id": "btn-label",
+            "label": "Button Label",
+            "default": "Team Culture"
+        },
+        {
+            "type": "url",
+            "id": "url",
+            "label": "Button URL"
+        },
+        {
+            "type": "range",
+            "id": "padding_top",
+            "min": 0,
+            "max": 150,
+            "step": 5,
+            "unit": "px",
+            "label": "t:sections.all.padding.padding_top",
+            "default": 65
+        },
+        {
+            "type": "range",
+            "id": "padding_bottom",
+            "min": 0,
+            "max": 150,
+            "step": 5,
+            "unit": "px",
+            "label": "t:sections.all.padding.padding_bottom",
+            "default": 65
+        }
+      ],
+
+      "presets": [
+        {
+            "name": "Video Culture",
+            "blocks": []
+        }
+     ]
+    }
+{% endschema %}
