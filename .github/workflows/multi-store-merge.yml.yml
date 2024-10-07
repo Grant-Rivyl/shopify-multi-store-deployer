@@ -18,3 +18,11 @@ jobs:
           to_branch: "live" # Replace with your destination branch
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is automatically provided by GitHub Actions
+          # Merge to the second store branch
+      - name: Merge to Store Branch 2
+        uses: jamiemccleave/shopify-multi-store-deployer@v2.0
+        with:
+          from_branch: "main" # Replace with your source branch name
+          to_branch: "live-2" # Replace with your second destination branch
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
